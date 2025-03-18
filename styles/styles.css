@@ -30,11 +30,13 @@ body {
 }
 .page-container {
   width: 1200px;
+  margin: 0 auto; /*центрируем все содержимое body*/
   background-color:#ffffff;
   display: flex;
   flex-direction: column;/*делаем направление главной оси сверху вниз */
   min-height: 100%;/*заполнит полностью всё содержимое окна браузера.*/
   flex-wrap: wrap;/*элементы перейдут на новую строку и не будут выпадать из родителя*/
+  box-shadow: 0px 0px 15px 0px #00000033;
 }
 .main-container {
   flex-grow: 1;/* Sticky footer (прикрепляем подвал к низу странички) только флекс-элемент может увеличиваться в размере, чтобы занять всё доступное пространство в контейнере */
@@ -42,30 +44,41 @@ body {
 .visually-hidden {
   display: none;
 }
-.page-header {
-  width: 1200px;
-}
 .header-container {
   padding: 0 70px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-start;
   gap: 28px;
 }
 .navigation {
   width: 892px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .navigation-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
   list-style: none;/*убирает точки перед списками*/
   margin: 0;
   padding: 0;
+  gap: 8px;
+}
+.navigation-user {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   text-align: center;
+  list-style: none;/*убирает точки перед списками*/
+  margin: 0;
+  padding: 0;
   gap: 8px;
 }
 .navigation-item {
@@ -109,7 +122,6 @@ body {
   margin-bottom: 69px;
 }
 .advantages {
-  width: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content:center;
@@ -168,10 +180,10 @@ body {
   text-decoration: none;
 }
 .advantages-item-dark {
-  width: 1200px;
   background-color: #82B3D3;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .advantages-title-discription-container {
   display: flex;
@@ -183,7 +195,6 @@ body {
   min-height: 385px;
 }
 .infrastructure {
-  width: 1200px;
   margin-bottom: 64px;
 }
 .infrastructure-top {
@@ -201,6 +212,7 @@ body {
 .infrastructure-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   min-height: 385px;
   list-style: none;
   margin: 0;
@@ -249,10 +261,10 @@ body {
   line-height: 36px;
 }
 .subscribe {
-  width: 1200px;
   min-height: 415px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: flex-end;
   text-align: center;
   margin-bottom: 40px;
@@ -270,7 +282,6 @@ body {
   margin-bottom: 54px;
   }
 .subscribe-background {
-  width: 1200px;
   min-height: 415px;
   color: #000000;
   background-color:#cccccc;
@@ -340,25 +351,22 @@ body {
   font-size: 20px;
   line-height: 36px;
 }
-.page-footer {
-  width: 1200px;
-  margin: 0 auto;
-}
 .footer-container {
   padding: 0 70px;
   min-height: 50px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  align-content: flex-end;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 .social-list {
   width: 142px;
   border: 1px solid #000000;/*потом убери и доделай*/
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   text-align: center;
   list-style: none;
@@ -382,14 +390,12 @@ body {
 }
 /* страница catalog.html */
 .filter {
-  width: 1200px;
   min-height: 412px;
   box-sizing: border-box;
   padding: 35px 70px 70px 70px;
   margin-bottom: 50px;
 }
 .filter-background {
-  width: 1200px;
   min-height: 412px;
   color: #000000;
   background-color:#cccccc;
@@ -429,6 +435,7 @@ body {
 .filter-catalog {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .filter-group-start {
   width: 150px;
@@ -466,6 +473,7 @@ body {
 .filter-list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: flex-start;
   list-style: none;
   margin: 0;
@@ -489,6 +497,9 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2px;
 }
 .filter-input-text {
   width: 143px;
@@ -523,6 +534,7 @@ body {
 .filter-buttons {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: flex-end;
   gap: 32px;
 }
@@ -544,13 +556,14 @@ body {
   line-height: 20px;
 }
 .catalog-hotel {
-  width: 1200px;
   margin-bottom: 60px;
 }
 .catalog-cap {
   min-height: 49px;
   padding: 0 70px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
@@ -577,6 +590,7 @@ body {
   gap: 10px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -695,6 +709,7 @@ body {
   list-style: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 8px;
 }
 .pagination-item {
@@ -703,6 +718,8 @@ body {
   border-radius: 4px;
   border: none;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
