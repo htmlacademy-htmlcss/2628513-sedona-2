@@ -637,12 +637,10 @@ body {
 }
 /* .catalog-card-link-img {
   list-style: none;
-  text-decoration-line: none;
-  height: 212px;
 } */
-/* .catalog-card-link-title {
-  text-decoration-line: none;
-} */
+.catalog-card-link-title {
+  text-decoration: none;/*убирает подчеркивание у ссылок*/
+}
 .catalog-card-title {
   width: 300px;
   margin: 0;
