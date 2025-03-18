@@ -30,7 +30,6 @@ body {
 }
 .page-container {
   width: 1200px;
-  padding-bottom: 51px;
   background-color:#ffffff;
   display: flex;
   flex-direction: column;/*делаем направление главной оси сверху вниз */
