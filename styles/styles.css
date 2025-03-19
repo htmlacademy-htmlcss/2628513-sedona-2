@@ -36,7 +36,7 @@ body {
   flex-direction: column;/*делаем направление главной оси сверху вниз */
   min-height: 100%;/*заполнит полностью всё содержимое окна браузера.*/
   flex-wrap: wrap;/*элементы перейдут на новую строку и не будут выпадать из родителя*/
-  box-shadow: 0px 0px 15px 0px #00000033;
+  box-shadow: 0 0 15px 0 #00000033;
 }
 .main-container {
   flex-grow: 1;/* Sticky footer (прикрепляем подвал к низу странички) только флекс-элемент может увеличиваться в размере, чтобы занять всё доступное пространство в контейнере */
@@ -44,17 +44,21 @@ body {
 .visually-hidden {
   display: none;
 }
+/*Для сохранения пропорций у img при изменении размеров*/
+.proportions-img {
+  max-width: 100%;
+  height: auto;
+}
 .header-container {
+  min-height: 64px;
   padding: 0 70px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 140px 1fr;
   align-items: center;
-  justify-content: flex-start;
-  gap: 28px;
+  column-gap: 28px;
 }
 .navigation {
-  width: 892px;
+  max-width: 892px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -613,7 +617,7 @@ body {
   display: grid;
   grid-template-columns: 340px 340px 340px;
   gap: 20px;
-  align-items: stretch;
+  align-items: start;
   align-content: stretch;
   justify-content: space-around;
   }
