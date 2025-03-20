@@ -123,21 +123,20 @@ body {
   align-content: flex-end;
   min-height: 485px;
   padding-bottom: 82px;
-  margin-bottom: 69px;
 }
 .advantages {
+  padding-top: 69px;
   display: flex;
   flex-wrap: wrap;
   justify-content:center;
-  margin-bottom: 64px;
 }
 .advantages-top {
-  width: 620px;
+  max-width: 620px;
   margin-top: 0;
   margin-bottom: 25px;
 }
 .advantages-top-description {
-  width: 651px;
+  max-width: 651px;
   margin-top: 0;
   margin-bottom: 90px;
 }
@@ -195,21 +194,24 @@ body {
   justify-content: center;
   align-content: center;
   gap: 62px;
-  width: 400px;
+  max-width: 400px;
   min-height: 385px;
 }
 .infrastructure {
-  margin-bottom: 64px;
+  padding-top: 64px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .infrastructure-top {
-  margin: 0 auto;
-  width: 505px;
+  max-width: 505px;
   margin-top: 0;
   margin-bottom: 20px;
 }
 .infrastructure-top-description {
-  margin: 0 auto;
-  width: 490px;
+  max-width: 490px;
   margin-top: 0;
   margin-bottom: 64px;
 }
@@ -222,7 +224,6 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  margin-bottom: 96px;
 }
 .infrastructure-title-discription-container {
   display: flex;
@@ -234,30 +235,39 @@ body {
   min-height: 385px;
 }
 .booking {
-  text-align: center;
-  padding-bottom: 96px;
+  min-height: 406px;
+}
+.booking-container {
+  padding: 96px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .booking-top {
-  margin: 0 auto;
-  width: 297px;
-  margin-top: 0;
+  margin:0;
+  padding: 0;
+  max-width: 592px;
   margin-bottom: 20px;
 }
 .booking-top-description {
-  margin: 0 auto;
-  width: 592px;
+  margin: 0;
+  padding: 0;
+  max-width: 592px;
   margin-top: 0;
   margin-bottom: 54px;
 }
 .booking-link-button {
-  width: 376px;
+  margin: 0;
+  padding: 8px 50px;
+  max-width: 376px;
   min-height: 52px;
   border-radius: 4px;
   background-color: #756157;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
 }
 .booking-text-button,
 .subscribe-email-button {
@@ -266,25 +276,7 @@ body {
 }
 .subscribe {
   min-height: 415px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  text-align: center;
-  margin-bottom: 40px;
 }
-.subscribe-top {
-  margin: 0 auto;
-  width: 404px;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-.subscribe-top-discription {
-  margin: 0 auto;
-  width: 475px;
-  margin-top: 0;
-  margin-bottom: 54px;
-  }
 .subscribe-background {
   min-height: 415px;
   color: #000000;
@@ -294,6 +286,26 @@ body {
   background-position: center;
   background-size: cover;
 }
+.subscribe-container {
+  padding-top: 96px;
+  padding-bottom: 104px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.subscribe-top {
+  max-width: 404px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.subscribe-top-discription {
+  max-width: 475px;
+  margin-top: 0;
+  margin-bottom: 54px;
+  }
 /*!!!внимательно к этим шрифтам
 они должны быть в такой последовательности!!!*/
 .font-unified-top{
@@ -322,13 +334,14 @@ body {
 }
 /*___________________________*/
 .subscribe-form {
-  width: 684px;
+  max-width: 684px;
   min-height: 52px;
-  margin: 0 auto;
-  margin-bottom: 104px;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0;
 }
 .fild {
@@ -356,14 +369,14 @@ body {
   line-height: 36px;
 }
 .footer-container {
-  padding: 0 70px;
+  padding: 45px 70px 0 70px;
   min-height: 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 .social-list {
   width: 142px;
