@@ -42,14 +42,21 @@ body {
   flex-grow: 1;/* Sticky footer (прикрепляем подвал к низу странички) только флекс-элемент может увеличиваться в размере, чтобы занять всё доступное пространство в контейнере */
 }
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /*Для сохранения пропорций у img при изменении размеров*/
 .proportions-img {
   max-width: 100%;
   height: auto;
 }
-.header-container {
+.page-header {
   min-height: 64px;
   padding: 0 70px;
   display: grid;
@@ -58,45 +65,81 @@ body {
   column-gap: 28px;
 }
 .navigation {
-  max-width: 892px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  min-height: 64px;
+  max-width: 892px;
 }
 .navigation-list {
+  list-style-type: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  text-align: center;
-  list-style: none;/*убирает точки перед списками*/
+  align-items:center;
+  justify-content: center;
+  gap: 8px;
   margin: 0;
   padding: 0;
-  gap: 8px;
 }
-.navigation-user {
+.navigation-list-right {
+  list-style-type: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  text-align: center;
-  list-style: none;/*убирает точки перед списками*/
+  align-items:center;
+  justify-content: center;
+  gap: 0;
   margin: 0;
   padding: 0;
-  gap: 8px;
 }
 .navigation-item {
-  padding: 16px 20px;/*!!!Для правого блока доработай!!!*/
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 .navigation-link {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-width: 68px;
+  min-height: 64px;
+  padding: 16px 20px;
+  text-decoration: none;
   color: inherit;
   background: inherit;
   font-family: inherit;
   font-weight: 700;
   font-size: 20px;
   text-align: center;
-  text-decoration: none;
   text-transform: capitalize;
+}
+.navigation-link-right {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-width: 44px;
+  min-height: 64px;
+  padding: 13px 23px;
+  text-decoration: none;
+  color: inherit;
+  background: inherit;
+  text-align: center;
 }
 .button {
   color: #ffffff;
@@ -107,12 +150,27 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
-.navigation-link-button {
+.navigation-link-right-button {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+  margin: 0;
+  min-height: 36px;
+  min-width: 160px;
   padding: 8px 34px;
+  text-decoration: none;
   background: #756157;
   border-radius: 4px;
 }
 .welcome {
+  display: block;
+  box-sizing: border-box;
+  min-height: 485px;
+  padding-top: 51px;
+  padding-bottom: 82px;
   color: #000000;
   background-color:#cccccc;
   background-image: url("../images/index-vorot.png"), url("../images/index-background.jpg");
@@ -120,23 +178,23 @@ body {
   background-repeat: no-repeat;
   background-position: left bottom, left top;
   text-align: center;
-  align-content: flex-end;
-  min-height: 485px;
-  padding-bottom: 82px;
 }
 .advantages {
   padding-top: 69px;
   display: flex;
   flex-wrap: wrap;
   justify-content:center;
+  align-items: center;
 }
 .advantages-top {
   max-width: 620px;
+  padding: 0;
   margin-top: 0;
   margin-bottom: 25px;
 }
 .advantages-top-description {
   max-width: 651px;
+  padding: 0;
   margin-top: 0;
   margin-bottom: 90px;
 }
@@ -144,7 +202,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  list-style: none;/*убирает точки перед списками*/
+  list-style-type: none;/*убирает точки перед списками*/
   margin: 0;
   padding: 0;
   text-align: center;
@@ -155,7 +213,6 @@ body {
 }
 .advantages-item-width-dark {
   background-color: #83B3D333;
-  ;
 }
 .advantages-title,
 .infrastructure-title {
@@ -207,65 +264,69 @@ body {
 }
 .infrastructure-top {
   max-width: 505px;
+  padding: 0;
   margin-top: 0;
   margin-bottom: 20px;
 }
 .infrastructure-top-description {
   max-width: 490px;
+  padding: 0;
   margin-top: 0;
   margin-bottom: 64px;
 }
 .infrastructure-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   min-height: 385px;
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   text-align: center;
 }
 .infrastructure-title-discription-container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   gap: 30px;
-  max-width: 400px;/*!!!*/
+  width: 400px;
   min-height: 385px;
 }
 .booking {
   min-height: 406px;
-}
-.booking-container {
   padding: 96px 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 .booking-top {
-  margin:0;
-  padding: 0;
   max-width: 592px;
+  padding: 0;
+  margin-top:0;
   margin-bottom: 20px;
 }
 .booking-top-description {
-  margin: 0;
-  padding: 0;
   max-width: 592px;
+  padding: 0;
   margin-top: 0;
   margin-bottom: 54px;
 }
 .booking-link-button {
+  box-sizing: border-box;
   margin: 0;
   padding: 8px 50px;
-  max-width: 376px;
+  min-width: 376px;
   min-height: 52px;
   border-radius: 4px;
   background-color: #756157;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -276,6 +337,15 @@ body {
 }
 .subscribe {
   min-height: 415px;
+  padding-top: 96px;
+  padding-bottom: 104px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 .subscribe-background {
   min-height: 415px;
@@ -286,23 +356,15 @@ body {
   background-position: center;
   background-size: cover;
 }
-.subscribe-container {
-  padding-top: 96px;
-  padding-bottom: 104px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
 .subscribe-top {
   max-width: 404px;
+  padding: 0;
   margin-top: 0;
   margin-bottom: 20px;
 }
 .subscribe-top-discription {
   max-width: 475px;
+  padding: 0;
   margin-top: 0;
   margin-bottom: 54px;
   }
@@ -340,15 +402,18 @@ body {
   padding: 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: stretch;
   gap: 0;
 }
 .fild {
   box-sizing: border-box;
-  width: 452px;/*реши вопрос с шириной*/
-  margin: 0;
-  padding: 14px 20px 14px;
+  min-width: 452px;
+  min-height: 52px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
   color: #000000;
   background-color:#F2F2F2;
   font-family: inherit;
@@ -358,37 +423,48 @@ body {
   line-height: 24px;
   text-align: left;
   text-decoration: none;
-  border: none;
 }
 .subscribe-button-button {
-  background:#82B3D3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+  margin: 0;
+  padding: 8px 50px;
   border: none;
   border-radius: 4px;
-  padding: 8px 50px;
-  font-size: 20px;
-  line-height: 36px;
+  background:#82B3D3;
+  min-width: 232px;
+  min-height: 52px;
 }
-.footer-container {
-  padding: 45px 70px 0 70px;
+.page-footer {
+  padding: 45px 70px 35px 70px;
   min-height: 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 35px;
 }
 .social-list {
-  width: 142px;/*реши вопрос с шириной*/
-  border: 1px solid #000000;/*потом убери и доделай*/
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  text-align: center;
-  list-style: none;
+  align-items: center;
   margin: 0;
   padding: 0;
+  list-style-type: none;
+}
+.social-item {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
 }
 .social-phone {
   color:#000000;
@@ -401,9 +477,29 @@ body {
   text-transform: uppercase;
   text-decoration-line: none;/*убрать подчеркивание...*/
   }
+.social-link {
+  box-sizing: border-box;
+  padding: 11px 13px;
+  min-width: 48px;
+  min-height: 40px;
+  background: #ffffff;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 .htmlacademy-link {
-  width: 115px;/*реши вопрос с шириной*/
-  border: 1px solid #000000;/*потом убери и доделай*/
+  min-width: 115px;
+  min-height: 33px;
+  background: #ffffff;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 /* страница catalog.html */
 .filter {
@@ -421,24 +517,36 @@ body {
   text-align: center;
 }
 .inner-top {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
   font-family: inherit;
   font-style: inherit;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
   text-align: left;
-  margin: 0;
-  margin-bottom: 8px;
 }
 .inner-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  list-style: none;
   margin: 0;
   padding: 0;
   margin-bottom: 40px;
-  gap: 20px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items:center;
+  gap: 3px;
+}
+.inner-item {
+  min-width: 15px;
+  min-height: 13px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .inner-link {
   font-family: inherit;
@@ -448,53 +556,69 @@ body {
   line-height: 21px;
   text-decoration: none;
 }
-.filter-catalog {
+.filter-catalog-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
 }
-.filter-group-start {
+.filter-catalog-item {
+  margin: 0;
+  padding: 0;
   max-width: 150px;
   border: none;
   text-align: left;
-  margin: 0;
-  padding: 0;
+}
+.filter-catalog-item-start {
   margin-right: 70px;
 }
-.filter-group-end {
-  max-width: 150px;
-  border: none;
-  text-align: left;
-  margin: 0;
-  padding: 0;
+.filter-catalog-item-end {
   margin-right: 140px;
 }
-.filter-price {
+.filter-price-item {
+  margin: 0;
+  padding: 0;
   max-width: 288px;
   border: none;
   text-align: left;
-  margin: 0;
-  padding: 0;
   margin-right: 70px;
 }
-.filter-title {
+.filter-price-top {
+  margin-bottom: 32px;
+}
+.filter-catalog-top {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
   font-family: inherit;
   font-style: inherit;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
-  padding-bottom: 32px;
 }
 .filter-list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 16px;
+  align-content: flex-start;
+}
+.filter-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .control {
   accent-color: #FFFFFF;
@@ -508,17 +632,22 @@ body {
 .control-input {
   margin: 0;
 }
-.filter-box {
+.filter-price-box {
+  max-width: 288px;
   min-height: 48px;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content:  flex-start;
+  align-items: center;
   gap: 2px;
 }
-.filter-input-text {
-  width: 143px;/*реши вопрос с шириной*/
+.filter-price-input-text {
+  box-sizing: border-box;
+  padding: 12px 20px;
+  max-width: 143px;
   border:none;
   color:#000000;
   background-color:#f2f2f2;
@@ -528,43 +657,57 @@ body {
   font-size: 18px;
   line-height: 24px;
   vertical-align: middle;
+  text-align: left;
+  text-decoration: none;
 }
 .filter-input-text-left {
-  padding-top: 12px;
-  padding-right: 20px;
-  padding-bottom: 12px;
-  padding-left: 20px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   box-sizing: border-box;
 }
 .filter-input-text-right {
-  padding-top: 12px;
-  padding-right: 20px;
-  padding-bottom: 12px;
-  padding-left: 20px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   box-sizing: border-box;
 }
-.filter-buttons {
+.filter-buttons-item {
+  margin: 0;
+  padding: 0;
+  max-width: 191px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
   gap: 32px;
 }
 .filter-button-current {
-  background:#82B3D3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 8px 50px;
   border: none;
   border-radius: 4px;
-  padding: 8px 50px;
+  background:#82B3D3;
+  min-width: 191px;
+  min-height: 36px;
 }
 .filter-button {
-  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
   padding: 8px 50px;
-  background:none;
   border: none;
+  border-radius: 4px;
+  background:none;
+  min-width: 191px;
+  min-height: 36px;
 }
 .navigation-text-button,
 .filter-text-button {
@@ -604,37 +747,53 @@ body {
   border: 2px solid #E5E5E5
 }
 .catalog-view-list {
-  gap: 10px;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 10px;
 }
 .catalog-view-item {
-  width: 48px;/*реши вопрос с шириной*/
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 2px 2px;
+}
+.catalog-view-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  background: #ffffff;
+  min-width: 48px;
   min-height: 48px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  border-width: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .catalog-list {
   margin: 0;
   margin-bottom: 80px;
   padding: 0 70px;
+  list-style-type: none;
   min-height: 438px;
   display: grid;
-  grid-template-columns: 340px 340px 340px;
+  grid-template-columns: repeat(auto-fit, minmax(340px,1fr));
   gap: 20px;
-  align-items: start;
-  align-content: stretch;
-  justify-content: space-around;
   }
-.catalog-card {
+.catalog-card-item {
   border: 1px solid #E5E5E5;
   border-radius: 4px;
   padding: 20px;
@@ -642,14 +801,17 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-items: center;
+  margin: 0;
   gap: 16px;
 }
-.catalog-card-link-title {
-  text-decoration: none;/*убирает подчеркивание у ссылок*/
-}
+/* .catalog-card-link-title {
+  text-decoration: none;
+} */
 .catalog-card-title {
   max-width: 300px;
   margin: 0;
+  padding: 0;
   color:#000000;
   background-color:#ffffff;
   font-family: inherit;
@@ -659,20 +821,31 @@ body {
   line-height: 28px;
   text-align: left;
 }
-.container-flex {
-  width: 300px;/*реши вопрос с шириной*/
+.container-flex-item {
+  margin: 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  box-sizing: border-box;
   align-items: center;
   gap: 20px;
 }
+.container-card-link-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
 .more-button {
-  width: 140px;/*реши вопрос с шириной*/
+  margin: 0;
+  min-width: 140px;
   min-height: 36px;
+  padding: 8px;
   border-radius: 4px;
   border: none;
+  box-sizing: border-box;
 }
 .more-button-dark {
   background: #756157;
@@ -699,19 +872,9 @@ body {
   font-size: 18px;
   line-height: 21px;
 }
-.card-dicription {
-  margin: 0;
-}
-.card-price {
-  margin: 0;
-}
-.card-stars {
-  margin: 0;
-}
 .card-reting {
   background: #F2F2F2;
   margin: 0;
-  padding: 8px 22px;
   font-family: inherit;
   font-style: inherit;
   font-weight: 400;
@@ -720,36 +883,35 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
-.pagination {
+.pagination-list {
   margin: 0;
   padding: 0 70px;
-  list-style: none;
+  list-style-type: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
   gap: 8px;
 }
 .pagination-item {
-  width: 60px;/*реши вопрос с шириной*/
-  min-height: 60px;
-  border-radius: 4px;
-  border: none;
+  background: #F2F2F2;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-.pagination-item-current {
-  background: #F2F2F2;
-}
-.pagination-item-nocurrent {
-  background: #82B3D3;
-}
-.pagination-item-intermediate {
-  background: #FFFFFF;
+  margin: 0;
+  padding: 2px 2px;
 }
 .pagination-link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
   text-decoration-line: none;
   font-family: inherit;
   font-style: inherit;
@@ -757,7 +919,27 @@ body {
   font-size: 20px;
   line-height: 36px;
 }
-.pagination-current,
+.pagination-link-current {
+  color: #000000;
+  background: #F2F2F2;
+  min-width: 60px;
+  min-height: 60px;
+  border: none;
+  border-radius: 4px;
+}
+.pagination-link-nocurrent {
+  color: #FFFFFF;
+  background: #82B3D3;
+  min-width: 60px;
+  min-height: 60px;
+  border: none;
+  border-radius: 4px;
+}
 .pagination-link-intermediate {
   color: #000000;
+  background: #FFFFFF;
+  min-width: 60px;
+  min-height: 60px;
+  border: none;
+  border-radius: 4px;
 }
