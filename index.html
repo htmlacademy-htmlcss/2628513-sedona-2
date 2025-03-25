@@ -11,45 +11,40 @@
   <body>
     <div class="page-container">
       <header class="page-header">
-        <div class="header-container">
-          <div class="navigation-logo-container">
-            <a class="navigation-logo proportions-img" href="index.html" aria-current="page">
-              <img class="navigation-img proportions-img" src="images/logo.svg" width="140" height="70" alt="logo">
-            </a>
-          </div>
-          <nav class="navigation">
-            <ul class="navigation-list">
-              <li class="navigation-item">
-                <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
-              </li>
-              <li class="navigation-item">
-                <a class="navigation-link" href="#">О Седоне</a>
-              </li>
-              <li class="navigation-item">
-                <a class="navigation-link" href="catalog.html">Гостиницы</a>
-              </li>
-            </ul>
-            <ul class="navigation-list navigation-user">
-              <li class="navigation-item">
-                <a class="navigation-link" href="#">
-                  <span class="visually-hidden">Поиск</span>
-                </a>
-              </li>
-              <li class="navigation-item">
-                <a class="navigation-link" href="#">
-                  <span class="visually-hidden">Избранное</span>
-                  <span class="likes-number">12</span>
-                </a>
-              </li>
-              <li class="navigation-item">
-                <a class="button navigation-link-button" href="#">
-                  <span class="navigation-text-button">ХОЧУ СЮДА</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
+        <a class="proportions-img" href="index.html" aria-current="page">
+          <img class="navigation-img proportions-img" src="images/logo.svg" width="140" height="70" alt="logo">
+        </a>
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">О Седоне</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            </li>
+          </ul>
+          <ul class="navigation-list-right">
+            <li class="navigation-item">
+              <a class="navigation-link-right" href="#">
+                <span class="visually-hidden">Поиск</span>
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link-right" href="#">
+                <span class="visually-hidden">Избранное</span>
+                <span class="likes-number">12</span>
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="button navigation-link-right-button" href="#">
+                <span class="navigation-text-button">ХОЧУ СЮДА</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </header>
       <main class="main-container">
         <section class="welcome">
@@ -138,56 +133,50 @@
           </ul>
         </section>
         <section class="booking">
-          <div class="booking-container">
-            <h2 class="booking-top font-unified-top">Заинтересовались?</h2>
-            <p class="booking-top-description font-unified-description">
-              Укажите предполагаемые даты поездки,
-              и мы покажем вам лучшие предложения гостиниц в Седоне
-            </p>
-            <a class="button booking-link-button" href="#">
-              <span class="booking-text-button">Поиск гостиницы в Седоне</span>
-            </a>
-          </div>
+          <h2 class="booking-top font-unified-top">Заинтересовались?</h2>
+          <p class="booking-top-description font-unified-description">
+            Укажите предполагаемые даты поездки,
+            и мы покажем вам лучшие предложения гостиниц в Седоне
+          </p>
+          <a class="button booking-link-button" href="#">
+            <span class="booking-text-button">Поиск гостиницы в Седоне</span>
+          </a>
         </section>
         <section class="subscribe subscribe-background">
-          <div class="subscribe-container">
-            <h2 class="subscribe-top font-unified-top color-light">Подпишитесь на расслыку</h2>
-            <p class="subscribe-top-discription font-unified-description color-light">Только полезная информация и никакого спама, честное бойскаутское!</p>
-            <form class="subscribe-form" action="http://echo.htmlacademy.ru/" method="post">
-              <label class="visually-hidden" for="subscribe-email">Укажите ваш e-mail</label>
-              <input class="fild" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
-              <button class="button subscribe-button-button" type="submit">
-                <span class="subscribe-email-button">Подписаться</span>
-              </button>
-            </form>
-          </div>
+          <h2 class="subscribe-top font-unified-top color-light">Подпишитесь на расслыку</h2>
+          <p class="subscribe-top-discription font-unified-description color-light">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <form class="subscribe-form" action="http://echo.htmlacademy.ru/" method="post">
+            <label class="visually-hidden" for="subscribe-email">Укажите ваш e-mail</label>
+            <input class="fild" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
+            <button class="button subscribe-button-button" type="submit">
+              <span class="subscribe-email-button">Подписаться</span>
+            </button>
+          </form>
         </section>
       </main>
       <footer class="page-footer">
-        <div class="footer-container">
-          <h2 class="visually-hidden">Социальные сети</h2>
-          <ul class="social-list">
-            <li class="social-item">
-              <a class="social-link" href="#">1
-                <span class="visually-hidden">В контакте </span>
-              </a>
-            </li>
-            <li class="social-item">
-              <a class="social-link" href="#">1
-                <span class="visually-hidden">Телеграмм</span>
-              </a>
-            </li>
-            <li class="social-item">
-              <a class="social-link" href="#">1
-                <span class="visually-hidden">Ютуб</span>
-              </a>
-            </li>
-          </ul>
-          <a class="social-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
-          <a class="htmlacademy-link" href="https://htmlacademy.ru/">2
-            <span class="visually-hidden">Логотип</span>
-          </a>
-        </div>
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="social-list">
+          <li class="social-item">
+            <a class="social-link" href="#">1
+              <span class="visually-hidden">В контакте </span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">1
+              <span class="visually-hidden">Телеграмм</span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">1
+              <span class="visually-hidden">Ютуб</span>
+            </a>
+          </li>
+        </ul>
+        <a class="social-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/">2
+          <span class="visually-hidden">Логотип</span>
+        </a>
       </footer>
     </div>
 
