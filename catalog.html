@@ -62,7 +62,7 @@
             </li>
           </ul>
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
-          <form class="filter-catalog-list" action="https://echo.htmlacademy.ru" method="get">
+          <div class="filter-catalog-list" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="filter-catalog-item filter-catalog-item-start">
               <legend class="filter-catalog-top color-light">
                 Инфраструктура
@@ -115,14 +115,16 @@
               <legend class="filter-price-top color-light">Стоимость,
                 <span>₽</span>:
               </legend>
-              <div class="filter-price-box">
-                <label class="filter-price-label" for="min">
-                  <input class="filter-price-input-text filter-input-text-left" type="text" value="0" id="min">
+              <form class="filter-price-form">
+                <input class="filter-price-input input-left" type="text" value="0" id="min">
+                <label class="filter-price-label label-grid-left" for="min">
+                  от
                 </label>
-                <label class="filter-price-label" for="max">
-                  <input class="filter-price-input-text filter-input-text-right" type="text" value="9000" id="max">
+                <input class="filter-price-input input-right" type="text" value="9000" id="max">
+                <label class="filter-price-label label-grid-right" for="max">
+                  до
                 </label>
-              </div>
+              </form>
             </fieldset>
             <div class="filter-buttons-item">
               <button class="button filter-button-current" type="submit">
@@ -130,7 +132,7 @@
               <button class="button filter-button" type="reset">
                 <span class="filter-text-button">Сбросить</span></button>
             </div>
-          </form>
+          </div>
         </section>
         <section class="catalog-hotel">
           <div class="catalog-cap">
@@ -162,19 +164,19 @@
           </div>
           <ul class="catalog-list">
             <li class="catalog-card-item">
-              <div class="container-card-link-item">
-                <a class="catalog-card-link-img" href="#">
-                  <img class="catalog-card-img proportions-img" src="images/hotel-1.jpg" width="300" height="212" alt="hotel-1">
+              <div class="container-card-item ">
+                <a class="catalog-card-link-img grid-img" href="#">
+                  <img class="proportions-img" src="images/hotel-1.jpg" width="300" height="212" alt="hotel-1">
                 </a>
-                <a class="catalog-card-link-title" href="#" tabindex="-1">
+                <a class="catalog-card-link-title grid-h3" href="#" tabindex="-1">
                   <h3 class="catalog-card-title">Amara Resort & Spa</h3>
                 </a>
-              </div>
-              <div class="container-flex-item card-general">
-                <p class="more-button">Гостиница</p>
-                <p class="more-button">От 4000 ₽</p>
-              </div>
-              <div class="container-flex-item">
+                <p class="more-button card-text-general grid-p1">
+                  Гостиница
+                </p>
+                <p class="more-button card-text-general grid-p2">
+                  От 4000 ₽
+                </p>
                 <button class="more-button more-button-dark">
                   <span class="more-text-button color-light">
                     Подробнее
@@ -185,68 +187,64 @@
                     В избранное
                   </span>
                 </button>
-              </div>
-              <div class="container-flex-item">
-                <p class="more-button four-stars">4
+                <p class="more-button four-stars grid-stars">4
                   <span class="visually-hidden">
                     Отель 4 звезды
                   </span>
                 </p>
-                <p class="more-button card-reting">Рейтинг:
+                <p class="more-button card-reting grid-reting">Рейтинг:
                   <span class="card-reting-number">8,5</span>
                 </p>
               </div>
             </li>
             <li class="catalog-card-item">
-              <div class="container-card-link-item">
-                <a class="catalog-card-link-img" href="#">
-                  <img class="catalog-card-img proportions-img" src="images/hotel-1.jpg" width="300" height="212" alt="hotel-1">
+              <div class="container-card-item ">
+                <a class="catalog-card-link-img grid-img" href="#">
+                  <img class="proportions-img" src="images/hotel-1.jpg" width="300" height="212" alt="hotel-1">
                 </a>
-                <a class="catalog-card-link-title" href="#" tabindex="-1">
-                  <h3 class="catalog-card-title">Amara Resort & Spa</h3>
+                <a class="catalog-card-link-title grid-h3" href="#" tabindex="-1">
+                  <h3 class="catalog-card-title">Villas at Poco Diablo</h3>
                 </a>
-              </div>
-              <div class="container-flex-item card-general">
-                <p class="more-button">Гостиница</p>
-                <p class="more-button">От 4000 ₽</p>
-              </div>
-              <div class="container-flex-item">
+                <p class="more-button card-text-general grid-p1">
+                  Гостиница
+                </p>
+                <p class="more-button card-text-general grid-p2">
+                  От 5000 ₽
+                </p>
                 <button class="more-button more-button-dark">
                   <span class="more-text-button color-light">
                     Подробнее
                   </span>
                 </button>
-                <button class="more-button more-button-light">
+                <button class="more-button more-button-intermediate">
                   <span class="more-text-button color-light">
                     В избранное
                   </span>
                 </button>
-              </div>
-              <div class="container-flex-item">
-                <p class="more-button four-stars">4
+                <p class="more-button four-stars grid-stars">4
                   <span class="visually-hidden">
                     Отель 4 звезды
                   </span>
                 </p>
-                <p class="more-button card-reting">Рейтинг:
-                  <span class="card-reting-number">8,5</span>
+                <p class="more-button card-reting grid-reting">Рейтинг:
+                  <span class="card-reting-number">9,2</span>
                 </p>
               </div>
             </li>
             <li class="catalog-card-item">
-              <div class="container-card-link-item">
-                <a class="catalog-card-link-img" href="#">
-                  <img class="catalog-card-img proportions-img" src="images/hotel-1.jpg" width="300" height="212" alt="hotel-1">
+              <div class="container-card-item ">
+                <a class="catalog-card-link-img grid-img" href="#">
+                  <img class="proportions-img" src="images/hotel-1.jpg" width="300" height="212" alt="hotel-1">
                 </a>
-                <a class="catalog-card-link-title" href="#" tabindex="-1">
-                  <h3 class="catalog-card-title">Amara Resort & Spa</h3>
+                <a class="catalog-card-link-title grid-h3" href="#" tabindex="-1">
+                  <h3 class="catalog-card-title">Desert Quail Inn</h3>
                 </a>
-              </div>
-              <div class="container-flex-item card-general">
-                <p class="more-button">Гостиница</p>
-                <p class="more-button">От 4000 ₽</p>
-              </div>
-              <div class="container-flex-item">
+                <p class="more-button card-text-general grid-p1">
+                  Гостиница
+                </p>
+                <p class="more-button card-text-general grid-p2">
+                  От 2500 ₽
+                </p>
                 <button class="more-button more-button-dark">
                   <span class="more-text-button color-light">
                     Подробнее
@@ -257,32 +255,30 @@
                     В избранное
                   </span>
                 </button>
-              </div>
-              <div class="container-flex-item">
-                <p class="more-button four-stars">4
+                <p class="more-button four-stars grid-stars">3
                   <span class="visually-hidden">
-                    Отель 4 звезды
+                    Отель 3 звезд.
                   </span>
                 </p>
-                <p class="more-button card-reting">Рейтинг:
-                  <span class="card-reting-number">8,5</span>
+                <p class="more-button card-reting grid-reting">Рейтинг:
+                  <span class="card-reting-number">6,9</span>
                 </p>
               </div>
             </li>
             <li class="catalog-card-item">
-              <div class="container-card-link-item">
-                <a class="catalog-card-link-img" href="#">
-                  <img class="catalog-card-img proportions-img" src="images/hotel-1.jpg" width="300" height="212" alt="hotel-1">
+              <div class="container-card-item ">
+                <a class="catalog-card-link-img grid-img" href="#">
+                  <img class="proportions-img" src="images/hotel-1.jpg" width="300" height="212" alt="hotel-1">
                 </a>
-                <a class="catalog-card-link-title" href="#" tabindex="-1">
-                  <h3 class="catalog-card-title">Amara Resort & Spa</h3>
+                <a class="catalog-card-link-title grid-h3" href="#" tabindex="-1">
+                  <h3 class="catalog-card-title">GreenTree Inn</h3>
                 </a>
-              </div>
-              <div class="container-flex-item card-general">
-                <p class="more-button">Гостиница</p>
-                <p class="more-button">От 4000 ₽</p>
-              </div>
-              <div class="container-flex-item">
+                <p class="more-button card-text-general grid-p1">
+                  Гостиница
+                </p>
+                <p class="more-button card-text-general grid-p2">
+                  От 1500 ₽
+                </p>
                 <button class="more-button more-button-dark">
                   <span class="more-text-button color-light">
                     Подробнее
@@ -293,14 +289,12 @@
                     В избранное
                   </span>
                 </button>
-              </div>
-              <div class="container-flex-item">
-                <p class="more-button four-stars">4
+                <p class="more-button four-stars grid-stars">5
                   <span class="visually-hidden">
-                    Отель 4 звезды
+                    Отель 5 звезд.
                   </span>
                 </p>
-                <p class="more-button card-reting">Рейтинг:
+                <p class="more-button card-reting grid-reting">Рейтинг:
                   <span class="card-reting-number">8,5</span>
                 </p>
               </div>
