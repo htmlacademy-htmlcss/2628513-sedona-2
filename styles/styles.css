@@ -1043,11 +1043,7 @@ body {
   -webkit-appearance: none;
   appearance: none;
   background: url(../images/vector.svg) no-repeat right center;
-  margin-
   background-size: 11px 7px;
-}
-.select-control-vector {
-
 }
 /* __________________________________________ */
 .select-control:not(:disabled):hover::before {/*наведение*/
