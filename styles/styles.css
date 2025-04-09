@@ -272,20 +272,24 @@ body {
 }
 /* ____________________________________________ */
 .search:hover::before,
-.likes:hover::before {/*наведение*/
+.likes:hover::before,
+.likes-number:hover {/*наведение*/
   background-color: #756157;
 }
 .search:focus-visible::before,
-.likes:focus-visible::before {/*переключение с клавиатуры*/
+.likes:focus-visible::before,
+.likes-number:focus-visible {/*переключение с клавиатуры*/
   background-color: #756157;
   outline: none;/*нет границ при фокусе*/
 }
 .search:focus-visible,
-.likes:focus-visible {/*переключение с клавиатуры*/
+.likes:focus-visible,
+.likes-number:focus-visible {/*переключение с клавиатуры*/
   outline: none;/*нет границ при фокусе*/
 }
 .search:active::before,
-.likes:active::before {/*нажатие*/
+.likes:active::before,
+.likes-number:active {/*нажатие*/
   background-color: #7561574D;
 }
 /* __________________________________________ */
@@ -779,7 +783,7 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items:center;
-  gap: 3px;
+  gap: 10px;
 }
 .inner-item {
   min-width: 15px;
@@ -791,6 +795,7 @@ body {
   align-items: center;
 }
 .inner-link {
+  position: relative;
   font-family: inherit;
   font-style: inherit;
   font-weight: 400;
@@ -798,6 +803,60 @@ body {
   line-height: 21px;
   text-decoration: none;
 }
+.inner-link-houme {
+  content: "";
+  display: block;
+  mask: url(../images/houme-catalog.svg) no-repeat center/contain;
+  width: 12px;
+  height: 12px;
+  transition: mask-color 0.5s, color 0.5s;
+  background-color: #FFFFFF;
+}
+.inner-link-form {
+  content: "";
+  display: block;
+  mask: url(../images/vector-right.svg) no-repeat center/contain;
+  width: 12px;
+  height: 12px;
+  transition: background-color 0.5s, color 0.5s;
+  background-color: #FFFFFF;
+}
+.inner-link-hotel {
+  transition: background-color 0.5s, color 0.5s;
+}
+/* __________________________________________ */
+.inner-link-hotel:not(:disabled):hover {/*наведение*/
+  color: #FFFFFF99;
+}
+.inner-link-hotel:not(:disabled):focus-visible {/*переключение с клавиатуры*/
+  color: #FFFFFF;
+  outline: none;/*нет границ при фокусе*/
+}
+.inner-link-hotel:not(:disabled):focus-visible {/*переключение с клавиатуры*/
+  outline: none;/*нет границ при фокусе*/
+}
+.inner-link-hotel:not(:disabled):active {/*нажатие*/
+  color: #FFFFFF4D;
+}
+/* _______________________________________*/
+.inner-link-houme:not(:disabled):hover,
+.inner-link-form:not(:disabled):hover {/*наведение*/
+  background-color: #FFFFFF99;
+}
+.inner-link-houme:not(:disabled):focus-visible,
+.inner-link-form:not(:disabled):focus-visible {/*переключение с клавиатуры*/
+  background-color: #FFFFFF;
+  outline: none;/*нет границ при фокусе*/
+}
+.inner-link-houme:not(:disabled):focus-visible,
+.inner-link-form:not(:disabled):focus-visible {/*переключение с клавиатуры*/
+  outline: none;/*нет границ при фокусе*/
+}
+.inner-link-houme:not(:disabled):active,
+.inner-link-form:not(:disabled):active {/*нажатие*/
+  background-color: #FFFFFF4D;
+}
+/* _______________________________________*/
 .filter-catalog-list {
   margin: 0;/*обязательно у list*/
   padding: 0;/*обязательно у list*/
@@ -877,14 +936,6 @@ body {
 .control-input {
   margin: 0;
 }
-/* .filter-price-group {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-}
-.filter-price-window1 {
-  grid-column: 1 / -1;
-} */
 .filter-price-form {
   max-height: 48px;
   min-width: 288px;
@@ -1042,18 +1093,20 @@ body {
   transition: background-color 0.5s, color 0.5s;
   -webkit-appearance: none;
   appearance: none;
-  background: url(../images/vector.svg) no-repeat right center;
+  background: url(../images/vector.svg) no-repeat;
   background-size: 11px 7px;
+  background-position: 260px center;
+  cursor: pointer;
 }
 /* __________________________________________ */
-.select-control:not(:disabled):hover::before {/*наведение*/
+.select-control:not(:disabled):hover {/*наведение*/
   border: 2px solid #68A2CA;
 }
-.select-control:not(:disabled):focus-visible::before {/*переключение с клавиатуры*/
+.select-control:not(:disabled):focus-visible {/*переключение с клавиатуры*/
   border: 2px solid #68A2CA;
   outline: none;/*нет границ при фокусе*/
 }
-.select-control:disabled::before {/*выключенный*/
+.select-control:disabled {/*выключенный*/
   border: 2px solid #0000004D;
   font-family: inherit;
   font-style: inherit;
