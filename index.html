@@ -5,26 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
     <title>HTML Academy: Седона</title>
   </head>
 
   <body>
     <div class="page-container">
       <header class="page-header">
-        <a class="logo-link" href="index.html">
+        <a class="logo-link logo-link-mask" href="index.html">
           <!-- <img class="navigation-img proportions-img" src="images/logo.svg" width="140" height="70" alt="logo"> -->
           <span class="visually-hidden">Логотип.</span>
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" aria-current="paga" href="index.html">Главная</a>
+              <a class="navigation-link" aria-current="page" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" aria-current="paga" href="#">О Седоне</a>
+              <a class="navigation-link" aria-current="page" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" aria-current="paga" href="catalog.html">Гостиницы</a>
+              <a class="navigation-link" aria-current="page" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
           <ul class="navigation-list-right">
@@ -50,7 +51,7 @@
       </header>
       <main class="main-container">
         <section class="welcome">
-          <h1 class="visually-hidden">Седона - город в Аризоне</h1>
+          <h1 class="visually-hidden">Седона - город в Аризоне.</h1>
           <img class="welcome-img proportions-img-index" src="images/welcome.svg" width="458" height="352" alt="welcome to sedona">
         </section>
         <section class="advantages">
@@ -69,7 +70,7 @@
                   Седона — не аттракцион для туристов, там течёт своя жизнь
                 </p>
               </div>
-              <img class="proportions-img-index advantages-img" src="images/real-town.jpg" width="800" height="385" alt="real town">
+              <img class="proportions-img-index" src="images/real-town.jpg" width="800" height="385" alt="real town">
             </li>
             <li class="advantages-item advantages-item-width">
               <div class="advantages-title-discription-container">
@@ -95,7 +96,7 @@
               </div>
             </li>
             <li class="advantages-item advantages-item-dark">
-              <img class="proportions-img-index advantages-img" src="images/devil-bridge.jpg" width="800" height="385" alt="the devil's bridge">
+              <img class="proportions-img-index" src="images/devil-bridge.jpg" width="800" height="385" alt="the devil's bridge">
               <div class="advantages-title-discription-container">
                 <h3 class="advantages-title color-light">Там есть мост дьявола</h3>
                 <p class="advantages-discription color-light">
@@ -113,7 +114,7 @@
             Опытный персонал и качественное обслуживание!
           </p>
           <ul class="infrastructure-list">
-            <li class="infrastructure-item infrastructure-item-noeven">
+            <li class="infrastructure-item">
               <div class="infrastructure-title-discription-container">
                 <h3 class="infrastructure-title infrastructure-title-houme infrastructure-title-icon">Жильё</h3>
                 <p class="infrastructure-description">Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
@@ -125,7 +126,7 @@
                 <p class="infrastructure-description">Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!</p>
               </div>
             </li>
-            <li class="infrastructure-item infrastructure-item-noeven">
+            <li class="infrastructure-item">
               <div class="infrastructure-title-discription-container">
                 <h3 class="infrastructure-title infrastructure-title-present  infrastructure-title-icon">Сувениры</h3>
                 <p class="infrastructure-description">Не только китайского,<br>но и настоящего местного<br>производства!</p>
@@ -147,7 +148,7 @@
           <h2 class="subscribe-top font-unified-top color-light">Подпишитесь на расслыку</h2>
           <p class="subscribe-top-discription font-unified-description color-light">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="http://echo.htmlacademy.ru/" method="post">
-            <label class="visually-hidden" for="subscribe-email">Укажите ваш e-mail</label>
+            <label class="visually-hidden" for="subscribe-email">Укажите ваш e-mail.</label>
             <input class="fild" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
             <button class="more-button color-light subscribe-button-button" type="submit">
               <span>Подписаться</span>
@@ -174,13 +175,105 @@
             </a>
           </li>
         </ul>
-        <a class="social-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
-        <a class="htmlacademy-link" href="https://htmlacademy.ru/">2
-          <span class="visually-hidden">Логотип.</span>
-        </a>
+        <div class="social-phone-wrappe">
+          <a class="social-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
+        </div>
+        <div class="htmlacademy-link-wrapper">
+          <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+            <span class="visually-hidden">Логотип.</span>
+          </a>
+        </div>
       </footer>
     </div>
+    <div class="modal-container">
+      <div class="modal">
+        <div class="modal-top">
+          <h2 class="modal-title">Поиск гостиницы в Седоне.</h2>
+          <button class="modal-close-button">
+            <span class="visually-hidden">
+              Кнопка закрыть.
+            </span>
+          </button>
+        </div>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="modal-group">
+            <div class="modal-wrapper">
+              <div class="modal-label-wrapper">
+                <label class="modal-label modal-label-text" for="modal-label-top">
+                  Дата Заезда:
+                </label>
+              </div>
+              <div class="modal-input-wrapper-top">
+                <input class="modal-input modal-label-text" type="text" value="27 апреля 2020" placeholder="27 апреля 2020" id="modal-label-top">
+                <span class="modal-info-messenger modal-info-messenger-warning">
+                  Мы не можем отправить вас в прошлое.
+                </span>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="modal-group">
+            <div class="modal-wrapper">
+              <div class="modal-label-wrapper">
+                <label class="modal-label modal-label-text" for="modal-label-bottom">
+                  Дата Выезда:
+                </label>
+              </div>
+              <div class="modal-input-wrapper-top">
+                <input class="modal-input modal-label-text" type="text" value="1 сентября 2021" placeholder="1 сентября 2021" id="modal-label-bottom">
+                <span class="modal-info-messenger">
+                  На эти даты есть свободные номера.Пока есть
+                </span>
+              </div>
+            </div>
+          </fieldset>
+          <div class="modal-all">
+            <fieldset class="modal-item-left">
+              <div class="modal-label-wrapper">
+                <label class="modal-label modal-label-text" for="modal-label-text-left">
+                  Взрослые:
+                </label>
+              </div>
+              <div class="modal-input-wrapper-end">
+                <button class="modal-button-left" type="button"></button>
+                <input class="modal-input-end modal-label-text" type="number" value="2" placeholder="2" id="modal-label-text-left">
+                <button class="modal-button-right" type="button"></button>
+              </div>
+            </fieldset>
+            <fieldset class="modal-item-right">
+              <div class="modal-label-wrapper-right">
+                <label class="modal-label-right modal-label-text" for="modal-label-text-right">
+                  Дети:
+                </label>
+              </div>
+              <div class="popover-button-wrapper-right">
+                <button class="popover-close-button">
+                  <span class="popover-svg"></span>
+                  <span class="visually-hidden">Кнопка закрыть.</span>
+                </button>
+              </div>
+              <div class="popover">
+                <div class="popover-content-triangle"></div>
+                <div class="popover-content">
+                  <h2 class="visually-hidden">Количество детей.</h2>
+                  <span class="popover-text">
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </div>
+              </div>
+              <div class="modal-input-wrapper-end">
+                <button class="modal-button-left" type="button"></button>
+                <input class="modal-input-end modal-label-text" type="number" value="2" placeholder="2" id="modal-label-text-right">
+                <button class="modal-button-right" type="button"></button>
+              </div>
+            </fieldset>
+          </div>
+          <button class=" modal-submit-button button-link" type="submit">
+            Найти
+          </button>
+        </form>
+      </div>
 
+    </div>
   </body>
 
 </html>
