@@ -12,7 +12,6 @@
     <div class="page-container">
       <header class="page-header">
         <a class="logo-link logo-link-mask" href="index.html">
-          <!-- <img class="navigation-img proportions-img" src="images/logo.svg" width="140" height="70" alt="logo"> -->
           <span class="visually-hidden">Логотип.</span>
         </a>
         <nav class="navigation">
@@ -42,7 +41,7 @@
             </li>
             <li class="navigation-item-button">
               <a class="more-button color-light navigation-link-right-button" href="#">
-                <span>ХОЧУ СЮДА</span>
+                <span>ХОЧУ СЮДА!</span>
               </a>
             </li>
           </ul>
@@ -57,12 +56,12 @@
                 <span class="visually-hidden">На главную страницу.</span>
               </a>
             </li>
-            <li class="inner-item">
+            <li class="inner-item-center">
               <a class="inner-link inner-link-form color-light" href="index.html">
                 <span class="visually-hidden">Раскрывающая форма гостиниц.</span>
               </a>
             </li>
-            <li class="inner-item">
+            <li class="inner-item-end">
               <a class="inner-link inner-link-hotel color-light" href="catalog.html" aria-current="page">
                 Гостиницы
               </a>
@@ -125,8 +124,7 @@
               </ul>
             </fieldset>
             <fieldset class="filter-price-item">
-              <legend class="filter-price-top color-light">Стоимость,
-                <span class="filter-price-top color-light">&#8381;</span>:
+              <legend class="filter-price-top color-light">Стоимость,<span class="filter-price-top color-light">&nbsp;&#8381;</span>:
               </legend>
               <div class="filter-price-form">
                 <input class="filter-price-input input-left" type="text" value="0" placeholder="0" id="min">
@@ -143,9 +141,6 @@
                   <div class="range-bar">
                     <button type="button" class="range-toggle toggle-min">
                     </button>
-                    <!-- <div class="range-bar" style="left:0; width:226px">
-                      <button type="button" class="range-toggle toggle-min">
-                      </button> -->
                     <button type="button" class="range-toggle toggle-max">
                     </button>
                   </div>
@@ -163,14 +158,14 @@
         <section class="catalog-hotel">
           <div class="catalog-cap">
             <div class="catalog-hotel-top-wrapper">
-              <h2 class="font-unified-top">Найдено гостиниц:
+              <h2 class="font-unified-top-top">Найдено гостиниц:
                 <span class="catalog-hotel-base">38</span>
               </h2>
             </div>
             <div class="select-control-wrapper">
               <select class="select-control" aria-label="sorting">
-                <option value="popular" selected>Сначала популярные</option>
-                <option value="cheap">Сначала дешёвые</option>
+                <option value="popular" selected>Сначала дешёвые</option>
+                <option value="cheap">Сначала популярные</option>
                 <option value="expensive">Сначала дорогие</option>
               </select>
             </div>
@@ -212,22 +207,23 @@
                 </span>
               </button>
               <button class="more-button color-light more-button-light">
-                <span>
-                  В избранное
-                </span>
+                В избранное
               </button>
-              <p class="star star-4 grid-star" role="img" aria-label="4 зведзы.">
-                <span class="visually-hidden">
-                  Отель 4 звезды.
-                </span>
-              </p>
-              <p class="catalog-card-p-bottom card-reting grid-reting">Рейтинг:&nbsp;
-                <span class="catalog-card-rating-base">8,5</span>
-              </p>
+              <div class="star-wrapper">
+                <p class="star"></p>
+                <p class="star"></p>
+                <p class="star"></p>
+                <p class="star"></p>
+              </div>
+              <div class="catalog-card-p-bottom-wrapper">
+                <p class="catalog-card-p-bottom card-reting grid-reting">Рейтинг:&nbsp;
+                  <span class="catalog-card-rating-base">8,5</span>
+                </p>
+              </div>
             </li>
             <li class="catalog-card-item">
               <a class="catalog-card-link-img grid-img" href="#">
-                <img class="proportions-img" src="images/hotel-1.jpg" width="300" height="212" alt="hotel-1">
+                <img class="proportions-img" src="images/hotel-2.jpg" width="300" height="212" alt="hotel-1">
               </a>
               <a class="catalog-card-link-title grid-h3" href="#" tabindex="-1">
                 <h3 class="catalog-card-title">Villas at Poco Diablo</h3>
@@ -239,27 +235,26 @@
                 От<span class="catalog-card-price-base">&nbsp;5000&nbsp;</span>&#8381;
               </p>
               <button class="more-button color-light more-button-dark">
-                <span>
-                  Подробнее
-                </span>
+                Подробнее
               </button>
               <button class="more-button color-light more-button-intermediate">
-                <span>
-                  В избранном
-                </span>
+                В избранном
               </button>
-              <p class="star star-4 grid-star" role="img" aria-label="4 зведзы.">
-                <span class="visually-hidden">
-                  Отель 4 звезды.
-                </span>
-              </p>
-              <p class="catalog-card-p-bottom card-reting grid-reting">Рейтинг:&nbsp;
-                <span class="catalog-card-rating-base">9,3</span>
-              </p>
+              <div class="star-wrapper">
+                <p class="star"></p>
+                <p class="star"></p>
+                <p class="star"></p>
+                <p class="star"></p>
+              </div>
+              <div class="catalog-card-p-bottom-wrapper">
+                <p class="catalog-card-p-bottom card-reting grid-reting">Рейтинг:&nbsp;
+                  <span class="catalog-card-rating-base">9,2</span>
+                </p>
+              </div>
             </li>
             <li class="catalog-card-item">
               <a class="catalog-card-link-img grid-img" href="#">
-                <img class="proportions-img" src="images/hotel-1.jpg" width="300" height="212" alt="hotel-1">
+                <img class="proportions-img" src="images/hotel-3.jpg" width="300" height="212" alt="hotel-1">
               </a>
               <a class="catalog-card-link-title grid-h3" href="#" tabindex="-1">
                 <h3 class="catalog-card-title">Desert Quail Inn </h3>
@@ -268,33 +263,31 @@
                 Гостиница
               </p>
               <p class="catalog-card-p-top grid-p2">
-                От<span class="catalog-card-price-base">&nbsp;4000&nbsp;</span>&#8381;
+                От<span class="catalog-card-price-base">&nbsp;2500&nbsp;</span>&#8381;
               </p>
               <button class="more-button color-light more-button-dark">
-                <span>
-                  Подробнее
-                </span>
+                Подробнее
               </button>
               <button class="more-button color-light more-button-light">
-                <span>
-                  В избранное
-                </span>
+                В избранное
               </button>
-              <p class="star star-3 grid-star" role="img" aria-label="3 зведзы.">
-                <span class="visually-hidden">
-                  Отель 3 звезды.
-                </span>
-              </p>
-              <p class="catalog-card-p-bottom card-reting grid-reting">Рейтинг:&nbsp;
-                <span class="catalog-card-rating-base">6,9</span>
-              </p>
+              <div class="star-wrapper">
+                <p class="star"></p>
+                <p class="star"></p>
+                <p class="star"></p>
+              </div>
+              <div class="catalog-card-p-bottom-wrapper">
+                <p class="catalog-card-p-bottom card-reting grid-reting">Рейтинг:&nbsp;
+                  <span class="catalog-card-rating-base">6,9</span>
+                </p>
+              </div>
             </li>
             <li class="catalog-card-item">
               <a class="catalog-card-link-img grid-img" href="#">
-                <img class="proportions-img" src="images/hotel-1.jpg" width="300" height="212" alt="hotel-1">
+                <img class="proportions-img" src="images/hotel-4.jpg" width="300" height="212" alt="hotel-1">
               </a>
               <a class="catalog-card-link-title grid-h3" href="#" tabindex="-1">
-                <h3 class="catalog-card-title">Amara Resort & Spa</h3>
+                <h3 class="catalog-card-title">GreenTree Inn</h3>
               </a>
               <p class="catalog-card-p-top grid-p1">
                 Гостиница
@@ -303,25 +296,21 @@
                 От<span class="catalog-card-price-base">&nbsp;1500&nbsp;</span>&#8381;
               </p>
               <button class="more-button color-light more-button-dark">
-                <span>
-                  Подробнее
-                </span>
+                Подробнее
               </button>
               <button class="more-button color-light more-button-light">
-                <span>
-                  В избранное
-                </span>
+                В избранное
               </button>
-              <p class="star star-2 grid-star" role="img" aria-label="2 зведзы.">
-                <span class="visually-hidden">
-                  Отель 2 звезды.
-                </span>
-              </p>
-              <p class="catalog-card-p-bottom card-reting grid-reting">Рейтинг:
-                <span class="catalog-card-rating-base">&nbsp; 5,0</span>
-              </p>
+              <div class="star-wrapper">
+                <p class="star"></p>
+                <p class="star"></p>
+              </div>
+              <div class="catalog-card-p-bottom-wrapper">
+                <p class="catalog-card-p-bottom card-reting grid-reting">Рейтинг:&nbsp;
+                  <span class="catalog-card-rating-base">5,0</span>
+                </p>
+              </div>
             </li>
-
           </ul>
           <ul class="pagination-list">
             <li class="pagination-item">
@@ -345,13 +334,13 @@
           </ul>
         </section>
         <section class="subscribe">
-          <h2 class="subscribe-top font-unified-top">Подпишитесь на расслыку</h2>
+          <h2 class="subscribe-top font-unified-top">Подпишитесь на рассылку</h2>
           <p class="subscribe-top-discription font-unified-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="http://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-email">Укажите ваш e-mail.</label>
             <input class="fild" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
             <button class="more-button color-light subscribe-button-button" type="submit">
-              <span>Подписаться</span>
+              Подписаться
             </button>
           </form>
         </section>
