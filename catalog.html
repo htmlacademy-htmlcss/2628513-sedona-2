@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
   <head>
     <meta charset="UTF-8">
@@ -11,8 +11,11 @@
   <body>
     <div class="page-container">
       <header class="page-header">
-        <a class="logo-link logo-link-mask" href="index.html">
+        <a class="logo-link" href="index.html">
           <span class="visually-hidden">Логотип.</span>
+          <span class="logo">
+            <img class="logo-img" src="images/logo.svg" width="140" height="70" alt="Логотип компании.">
+          </span>
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
@@ -23,7 +26,7 @@
               <a class="navigation-link" aria-current="page" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" aria-current="page" href="catalog.html">Гостиницы</a>
+              <a class="navigation-link navigation-item-current" aria-current="page" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
           <ul class="navigation-list-right">
@@ -41,7 +44,7 @@
             </li>
             <li class="navigation-item-button">
               <a class="more-button color-light navigation-link-right-button" href="#">
-                <span>ХОЧУ СЮДА!</span>
+                ХОЧУ СЮДА!
               </a>
             </li>
           </ul>
@@ -140,8 +143,14 @@
                 <div class="range-scale">
                   <div class="range-bar">
                     <button type="button" class="range-toggle toggle-min">
+                    <span class="visually-hidden">
+                      Изменить минимальную стоимость.
+                    </span>
                     </button>
                     <button type="button" class="range-toggle toggle-max">
+                      <span class="visually-hidden">
+                        Изменить максимальную стоимость.
+                      </span>
                     </button>
                   </div>
                 </div>
@@ -210,6 +219,9 @@
                 В избранное
               </button>
               <div class="star-wrapper">
+                <span class="visually-hidden">
+                  Отель 4 звезды
+                </span>
                 <p class="star"></p>
                 <p class="star"></p>
                 <p class="star"></p>
@@ -241,6 +253,9 @@
                 В избранном
               </button>
               <div class="star-wrapper">
+                <span class="visually-hidden">
+                  Отель 4 звезды
+                </span>
                 <p class="star"></p>
                 <p class="star"></p>
                 <p class="star"></p>
@@ -272,6 +287,9 @@
                 В избранное
               </button>
               <div class="star-wrapper">
+                <span class="visually-hidden">
+                  Отель 3 звезды
+                </span>
                 <p class="star"></p>
                 <p class="star"></p>
                 <p class="star"></p>
@@ -302,6 +320,9 @@
                 В избранное
               </button>
               <div class="star-wrapper">
+                <span class="visually-hidden">
+                  Отель 2 звезды
+                </span>
                 <p class="star"></p>
                 <p class="star"></p>
               </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
   <head>
     <meta charset="UTF-8">
@@ -12,16 +12,19 @@
   <body>
     <div class="page-container">
       <header class="page-header">
-        <a class="logo-link logo-link-mask" href="index.html">
+        <a class="logo-link" href="index.html">
           <span class="visually-hidden">Логотип.</span>
+          <span class="logo">
+            <img class="logo-img" src="images/logo.svg" width="140" height="70" alt="Логотип компании.">
+          </span>
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" aria-current="page" href="index.html">Главная</a>
+              <a class="navigation-link navigation-item-current" aria-current="page" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" aria-current="page" href="#">О Седоне</a>
+              <a class="navigation-link " aria-current="page" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" aria-current="page" href="catalog.html">Гостиницы</a>
@@ -51,7 +54,7 @@
       <main class="main-container">
         <section class="welcome">
           <h1 class="visually-hidden">Седона - город в Аризоне.</h1>
-          <img class="welcome-img proportions-img-index" src="images/welcome.svg" width="458" height="352" alt="welcome to sedona">
+          <img class="welcome-img proportions-img-index" src="images/welcome.svg" width="458" height="352" alt="добро пожаловать в Седону.">
         </section>
         <section class="advantages">
           <h2 class="advantages-top font-unified-top">
@@ -189,7 +192,7 @@
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <button class="modal-close-button">
             <span class="visually-hidden">
-              Кнопка закрыть.
+              Закрыть окно поиска гостиниц в Седоне.
             </span>
           </button>
         </div>
@@ -217,9 +220,9 @@
                 </label>
               </div>
               <div class="modal-input-wrapper-top">
-                <input class="modal-input modal-input-text" type="text" value="1 сентября 2021" placeholder="1 сентября 2021" id="modal-label-bottom">
+                <input class="modal-input modal-input-text" type="text" value="1 сентября 2023" placeholder="1 сентября 2021" id="modal-label-bottom">
                 <span class="modal-info-messenger">
-                  На эти даты есть свободные номера.&nbsp;Пока есть
+                  На эти даты есть свободные номера. Пока есть
                 </span>
               </div>
             </div>
@@ -242,21 +245,21 @@
                 <label class="modal-label-right modal-label-text" for="modal-label-text-right">
                   Дети:
                 </label>
-              </div>
-              <div class="popover-button-wrapper-right">
-                <button class="popover-close-button">
-                  <span class="popover-svg"></span>
-                  <span class="visually-hidden">Кнопка закрыть.</span>
-                </button>
-              </div>
-              <div class="popover">
-                <div class="popover-content-triangle"></div>
-                <div class="popover-content">
-                  <h2 class="visually-hidden">Количество детей.</h2>
-                  <span class="popover-text">
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                    <svg lass="tooltip-icon" alt="Тултип к кнопке-укажите количество детей." width="26" height="26" viewBox="0 0 26 26" fill="rgba(131, 179, 211, 1)" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white" />
+                    </svg>
+                    <!-- <span class="tooltip-triangle"></span> -->
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">
                     Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                    <svg width="19" height="9" viewBox="0 0 19 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.5 0L19 9H0L9.5 0Z" fill="#333333" />
+                    </svg>
                   </span>
-                </div>
+                </span>
               </div>
               <div class="modal-input-wrapper-end">
                 <button class="modal-button-left" type="button"></button>
@@ -270,7 +273,6 @@
           </button>
         </form>
       </div>
-
     </div>
   </body>
 
