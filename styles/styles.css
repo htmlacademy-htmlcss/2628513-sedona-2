@@ -1347,7 +1347,7 @@ img {
   outline: 2px solid #68A2CA;
 }
 .catalog-view-link:not(:disabled):active {
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
 }
 .catalog-list {
   margin: 0;
