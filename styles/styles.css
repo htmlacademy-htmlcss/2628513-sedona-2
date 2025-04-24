@@ -1003,7 +1003,7 @@ img {
   line-height: 23px;
   text-transform: capitalize;
 }
-.control-input[type="checkbox"]:checked + .control-mark::before{
+.control-input:not(:disabled)[type="checkbox"]:checked + .control-mark::before{
   position: absolute;
   width: 12px;
   height: 10px;
@@ -1012,7 +1012,7 @@ img {
   top: 4.5px;
   left: 4.5px;
 }
-.control-input[type="radio"]:checked + .control-mark-radio::before{
+.control-input:not(:disabled)[type="radio"]:checked + .control-mark-radio::before{
   position: absolute;
   width: 10px;
   height: 10px;
@@ -1021,15 +1021,15 @@ img {
   top: 4.5px;
   left: 4.5px;
 }
-.control-input[type="checkbox"]:hover + .control-mark,
-.control-input[type="radio"]:hover + .control-mark {
+.control-input:not(:disabled)[type="checkbox"]:hover + .control-mark,
+.control-input:not(:disabled)[type="radio"]:hover + .control-mark {
   background-color: #82B3D3;
 }
-.control-input[type="checkbox"]:active + .control-mark,
-.control-input[type="radio"]:active + .control-mark {
+.control-input:not(:disabled)[type="checkbox"]:active + .control-mark,
+.control-input:not(:disabled)[type="radio"]:active + .control-mark {
   background-color: #68A2CA4D;
 }
-.control-label:hover {
+.control-label:not(:disabled):hover {
   color: #FFFFFF4D;
 }
 .control-label:active {
@@ -1038,8 +1038,8 @@ img {
  .control-input:disabled + .control-mark  {
   background-color: #FFFFFF;
 }
-.control-input[type="checkbox"]:focus-within + .control-mark,
-.control-input[type="radio"]:focus-within + .control-mark {
+.control-input:not(:disabled)[type="checkbox"]:focus-within + .control-mark,
+.control-input:not(:disabled)[type="radio"]:focus-within + .control-mark {
   outline: 3px solid #82B3D3;
 }
 .control-input {
@@ -1326,6 +1326,9 @@ img {
   display: block;
   width: 16px;
   height: 14px;
+}
+.catalog-view-link-current {
+  outline: 2px solid #000000
 }
 .show-cards::before {
   background: url(../images/show-cards.svg) no-repeat center/contain;
