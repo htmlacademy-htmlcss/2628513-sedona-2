@@ -797,7 +797,7 @@ img {
 }
 .filter {
   box-sizing: border-box;
-  padding: 34px 70px 72px 70px;
+  padding: 35px 70px 65px 70px;
 }
 .filter-background {
   min-height: 412px;
@@ -935,7 +935,7 @@ img {
   flex-grow: 1;
 }
 .filter-price-top {
-  margin-bottom: 32px;
+  margin-bottom: 31px;
   font-family: inherit;
   font-weight: 700;
   font-size: 20px;
@@ -1056,7 +1056,7 @@ img {
   margin: 0;
   padding: 0;
   position: relative;
-  top: 48px;
+  top: 44px;
   margin-left: 3px;
   width: 222px;
   outline: 2px solid rgba(255, 255, 255, 1);
@@ -1102,7 +1102,7 @@ img {
   outline: none;
 }
 .filter-price-label {
-  padding: 12px 20px;
+  padding: 10px 20px;
   max-height: 48px;
   max-width: 143px;
   justify-self: end;
@@ -1130,7 +1130,7 @@ img {
   grid-area: 1 / 4 / 4 / 5;
 }
 .filter-price-input {
-  padding: 12px 46px 12px 20px;
+  padding: 10px 46px 12px 20px;
   max-height: 48px;
   max-width: 143px;
   border:none;
@@ -1167,7 +1167,7 @@ img {
 .filter-buttons-item {
   margin: 0;
   padding: 0;
-  padding-top: 56px;
+  padding-top: 55px;
   max-width: 191px;
   display: flex;
   flex-direction: column;
