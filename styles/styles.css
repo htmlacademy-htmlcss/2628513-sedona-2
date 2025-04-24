@@ -977,6 +977,11 @@ img {
   padding-left: 33px;
   accent-color: #FFFFFF;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 112px;
 }
 .control-mark {
   position: absolute;
@@ -985,6 +990,7 @@ img {
   border-radius: 4px;
   margin-left: -37px;
   background-color: #FFFFFF;
+  flex-shrink: 3;
 }
 .control-mark-radio {
   border-radius: 50%;
@@ -1132,6 +1138,7 @@ img {
 .filter-price-input {
   padding: 10px 46px 12px 20px;
   max-height: 48px;
+  min-height: 48px;
   max-width: 143px;
   border:none;
   color:#000000;
@@ -1146,7 +1153,7 @@ img {
 }
 .filter-price-input:not(:disabled):focus-visible,
 .filter-price-input:not(:disabled):focus {
-  outline: none;
+  outline: 3px solid #83B3D3;
 }
 .input-left {
   display: flex;
