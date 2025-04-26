@@ -14,9 +14,7 @@
       <header class="page-header">
         <a class="logo-link" href="index.html">
           <span class="visually-hidden">Логотип.</span>
-          <span class="logo">
-            <img class="logo-img" src="images/logo.svg" width="140" height="70" alt="Логотип компании.">
-          </span>
+          <img class="logo-img" src="images/logo.svg" width="140" height="70" alt="Логотип компании.">
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
@@ -32,8 +30,7 @@
           </ul>
           <ul class="navigation-list-right">
             <li class="navigation-item-right">
-              <a class="navigation-link-right
-              search" href="#">
+              <a class="navigation-link-right search" href="#">
                 <span class="visually-hidden">Поиск.</span>
               </a>
             </li>
@@ -44,9 +41,9 @@
               </a>
             </li>
             <li class="navigation-item-button">
-              <a class="more-button color-light navigation-link-right-button" href="#">
+              <button class="more-button color-light navigation-link-right-button">
                 ХОЧУ СЮДА!
-              </a>
+            </button>
             </li>
           </ul>
         </nav>
@@ -141,9 +138,9 @@
             Укажите предполагаемые даты поездки,<br>
             и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
-          <a class="more-button color-light booking-link-button" href="#">
+          <button class="more-button color-light booking-link-button">
             Поиск гостиницы в Седоне
-          </a>
+          </button>
         </section>
         <section class="subscribe subscribe-background">
           <h2 class="subscribe-top font-unified-top color-light">Подпишитесь на рассылку</h2>
@@ -245,21 +242,13 @@
                 <label class="modal-label-right modal-label-text" for="modal-label-text-right">
                   Дети:
                 </label>
-                <span class="tooltip">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
-                    <svg lass="tooltip-icon" alt="Тултип к кнопке-укажите количество детей." width="26" height="26" viewBox="0 0 26 26" fill="rgba(131, 179, 211, 1)" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="13" cy="13" r="13" fill="#83B3D3" />
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white" />
-                    </svg>
-                    <!-- <span class="tooltip-triangle"></span> -->
+                <div class="tooltip-toggle-wrapper">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children">i
                   </button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-children">
                     Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
-                    <svg width="19" height="9" viewBox="0 0 19 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.5 0L19 9H0L9.5 0Z" fill="#333333" />
-                    </svg>
                   </span>
-                </span>
+                </div>
               </div>
               <div class="modal-input-wrapper-end">
                 <button class="modal-button-left" type="button"></button>
@@ -268,7 +257,7 @@
               </div>
             </fieldset>
           </div>
-          <button class=" modal-submit-button button-link" type="submit">
+          <button class=" modal-submit-button" type="submit">
             Найти
           </button>
         </form>

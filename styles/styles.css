@@ -72,7 +72,7 @@ img {
   align-items:center;
   max-width: 160px;
   min-width: 160px;
-  background: #756157;
+  background: rgba(117, 97, 87, 1);
   transition: background-color 0.5s, color 0.5s;
 }
 .main-container {
@@ -106,17 +106,18 @@ img {
   padding: 0 70px;
   display: grid;
   grid-template-columns: 140px 1fr;
-  align-items: center;
+  align-items: start;
   column-gap: 28px;
   position: relative;
 }
 .logo-link {
-  position: relative;
   display: block;
 }
 .logo-img {
-  position: absolute;
-  top: -32px;
+  display: block;
+  object-fit: contain;
+  position: fixed;
+  z-index: 5;
 }
 .navigation {
   display: flex;
@@ -182,6 +183,7 @@ img {
   text-align: center;
   border-radius: 10px;
   background-color: #7DB54F;
+  transition: background-color 0.5s, color 0.5s;
 }
 .navigation-item {
   max-width: 127px;
@@ -199,7 +201,6 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.5s, color 0.5s;
   text-decoration: none;
   list-style-type: none;
   color: inherit;
@@ -272,22 +273,30 @@ img {
 .search::before {
   mask: url(../images/search.svg) no-repeat center/contain;
   background-color: #000000;
+  transition: background-color 0.5s, color 0.5s;
 }
 .likes::before {
   mask: url(../images/likes.svg) no-repeat center/contain;
   background-color: #000000;
+  transition: background-color 0.5s, color 0.5s;
 }
-.search:hover::before,
-.likes:hover::before,
-.likes-number:hover {
+.search:hover::before {
   background-color: #756157;
 }
-.search:focus-visible::before,
-.search:focus::before,
-.likes:focus-visible::before,
+/**/
+.likes:hover::before,
 .likes:focus::before,
-.likes-number:focus-visible,
-.likes-number:focus {
+.likes:focus-visible::before {
+  background-color: rgba(97, 80, 72, 1);
+}
+.likes:hover .likes-number,
+.likes:focus .likes-number,
+.likes:focus-visible .likes-number {
+  background-color: rgba(108, 158, 66, 1);
+}
+/**/
+.search:focus-visible::before,
+.search:focus::before {
   background-color: #756157;
   outline: none;
 }
@@ -299,10 +308,15 @@ img {
 .likes-number:focus {
   outline: none;
 }
-.search:active::before,
-.likes:active::before,
-.likes-number:active {
+.search:active::before {
   background-color: #7561574D;
+}
+.likes:active::before {
+  background-color: rgba(117, 97, 87, 1);
+}
+.likes:active .likes-number {
+  background-color: rgba(125, 181, 79, 1);
+  color: rgba(255, 255, 255, 0.3);
 }
 .welcome {
   display: flex;
@@ -389,7 +403,7 @@ img {
   width: 60px;
   height: 2px;
   background-color: #FFFFFF4D;
-  margin: 30px auto 32px;
+  margin: 30px auto 30px;
 }
 .advantages-title-center::after {
   content: "";
@@ -397,7 +411,7 @@ img {
   width: 60px;
   height: 2px;
   background-color: #0000004D;
-  margin: 30px auto 32px;
+  margin: 30px auto 30px;
 }
 .advantages-discription,
 .infrastructure-description {
@@ -623,20 +637,46 @@ img {
   min-height: 52px;
   padding: 12px 20px;
   border: none;
-  color: #000000;
-  background-color:#F2F2F2;
+  color: rgba(0, 0, 0);
+  background: rgba(242, 242, 242, 1);
   font-family: inherit;
   font-style: inherit;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   text-align: left;
   text-decoration: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  transition: background-color 0.5s, color 0.5s;
 }
-.fild:focus-visible {
+.fild::placeholder,
+.input-left::placeholder,
+.input-right::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.fild:not(:disabled):hover,
+.input-left:not(:disabled):hover,
+.input-right:not(:disabled):hover  {
+  background-color: rgba(230, 230, 230, 1);
+  color: rgba(0, 0, 0, 0.6);
+}
+.fild:not(:disabled):focus,
+.fild:not(:disabled):focus-visible,
+.input-left:not(:disabled):focus,
+.input-left:not(:disabled):focus-visible,
+.input-right:not(:disabled):focus,
+.input-right:not(:disabled):focus-visible {
+  background-color: rgba(230, 230, 230, 1);
+  color: rgba(0, 0, 0, 0.6);
   outline: 3px solid rgba(131, 179, 211, 1)
+}
+.fild:disabled,
+.input-left:disabled,
+.input-right:disabled {
+  background-color: rgba(229, 229, 229, 1);
+  color: rgba(255, 255, 255, 1);
+  cursor: default;
 }
 .subscribe-button-button {
   display: flex;
@@ -644,7 +684,7 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   align-items:center;
-  background-color:#82B3D3;
+  background-color: rgba(130, 179, 211, 1);
   width: 232px;
   min-height: 52px;
   border-radius: 0;
@@ -693,7 +733,7 @@ img {
 .social-link::before {
   content: "";
   display: block;
-  width: 24px;
+  width: 25px;
   height: 16px;
 }
 .vk::before {
@@ -821,7 +861,7 @@ img {
   min-width: 114px;
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -863,8 +903,8 @@ img {
   content: "";
   display: block;
   mask: url(../images/houme-catalog.svg) no-repeat center/contain;
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 15px;
   transition: mask-color 0.5s, color 0.5s;
   background-color: #FFFFFF;
 }
@@ -935,6 +975,7 @@ img {
   flex-grow: 1;
 }
 .filter-price-top {
+  padding: 0;
   margin-bottom: 31px;
   font-family: inherit;
   font-weight: 700;
@@ -962,8 +1003,8 @@ img {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 14px;
-  align-content: flex-start;
+  gap: 16px;
+  /* align-content: flex-start;  */
 }
 .catalog-filter-item {
   display: flex;
@@ -974,7 +1015,7 @@ img {
 }
 .control {
   position: relative;
-  padding-left: 33px;
+  padding-left: 35px;
   accent-color: #FFFFFF;
   cursor: pointer;
   display: flex;
@@ -982,15 +1023,17 @@ img {
   justify-content: flex-start;
   flex-wrap: wrap;
   max-width: 112px;
+  transition: background-color 0.5s, color 0.5s;
 }
 .control-mark {
   position: absolute;
   width: 20px;
   height: 19px;
   border-radius: 4px;
-  margin-left: -37px;
+  margin-left: -35px;
   background-color: #FFFFFF;
   flex-shrink: 3;
+  transition: background-color 0.5s, color 0.5s;
 }
 .control-mark-radio {
   border-radius: 50%;
@@ -1003,7 +1046,7 @@ img {
   line-height: 23px;
   text-transform: capitalize;
 }
-.control-input:not(:disabled)[type="checkbox"]:checked + .control-mark::before{
+.control-input:not(:disabled)[type="checkbox"]:checked + .control-mark:not(:disabled)::before{
   position: absolute;
   width: 12px;
   height: 10px;
@@ -1012,7 +1055,7 @@ img {
   top: 4.5px;
   left: 4.5px;
 }
-.control-input:not(:disabled)[type="radio"]:checked + .control-mark-radio::before{
+.control-input:not(:disabled)[type="radio"]:checked + .control-mark-radio:not(:disabled)::before{
   position: absolute;
   width: 10px;
   height: 10px;
@@ -1021,34 +1064,30 @@ img {
   top: 4.5px;
   left: 4.5px;
 }
-.control-input:not(:disabled)[type="checkbox"]:hover + .control-mark,
-.control-input:not(:disabled)[type="radio"]:hover + .control-mark {
-  background-color: #82B3D3;
+.control:not(:disabled):hover {
+  opacity: 0.6;
 }
-.control-input:not(:disabled)[type="checkbox"]:active + .control-mark,
-.control-input:not(:disabled)[type="radio"]:active + .control-mark {
-  background-color: #68A2CA4D;
+.control:not(:disabled):hover .control-mark {
+  opacity: 0.6;
 }
-.control-label:not(:disabled):hover {
-  color: #FFFFFF4D;
+.control:not(:disabled):active {
+  opacity: 0.3;
 }
-.control-label:active {
-  color: #68A2CA4D;
+.control:not(:disabled):active .control-mark {
+  opacity: 0.3;
 }
- .control-input:disabled + .control-mark  {
-  background-color: #FFFFFF;
+.control:not(:disabled):focus-within {
+  color: rgba(255, 255, 255, 1);
 }
-.control-input:not(:disabled)[type="checkbox"]:focus-within + .control-mark,
-.control-input:not(:disabled)[type="radio"]:focus-within + .control-mark {
-  outline: 3px solid #82B3D3;
+.control:not(:disabled):focus-within .control-mark {
+  outline: 3px solid rgba(131, 179, 211, 1);
+  background-color: rgba(255, 255, 255, 1);
 }
 .control-input {
   appearance: none;
   margin: 0;
 }
 .filter-price-form {
-  max-height: 48px;
-  min-height: 48px;
   min-width: 288px;
   justify-self: baseline;
   align-self: center;
@@ -1056,13 +1095,13 @@ img {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 2px;
+  column-gap: 2px;
 }
 .range {
   margin: 0;
   padding: 0;
   position: relative;
-  top: 44px;
+  margin-top: 47px;
   margin-left: 3px;
   width: 222px;
   outline: 2px solid rgba(255, 255, 255, 1);
@@ -1094,7 +1133,7 @@ img {
 }
 .toggle-max {
   top: -15px;
-  left: 206px;
+  left: 204px;
 }
 .range-toggle:hover {
   background-color: #ffffff;
@@ -1162,6 +1201,7 @@ img {
   grid-area: 1 / 1 / 1 / 3;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  transition: background-color 0.5s, color 0.5s;
 }
 .input-right {
   display: flex;
@@ -1170,11 +1210,11 @@ img {
   grid-area: 1 / 3 / 3 / 5;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+  transition: background-color 0.5s, color 0.5s;
 }
 .filter-buttons-item {
   margin: 0;
-  padding: 0;
-  padding-top: 55px;
+  padding: 56px 0 0;
   max-width: 191px;
   display: flex;
   flex-direction: column;
@@ -1202,20 +1242,22 @@ img {
   align-items: center;
   width: 191px;
   background: none;
+  transition: background-color 0.5s, color 0.5s;
 }
 .filter-button:not(:disabled):hover {
-  color: #FFFFFF5D;
+  opacity: 0.6;
 }
 .filter-button:not(:disabled):focus-visible,
 .filter-button:not(:disabled):focus {
-  outline: 3px solid #83B3D3;
+  outline: 3px solid rgba(131, 179, 211, 1);
   color: #FFFFFF;
 }
 .filter-button:not(:disabled):active {
-  color: #FFFFFF3D;
+  opacity: 0.3;
 }
 .filter-button:disabled {
-  color: #FFFFFF1D;
+  opacity: 0.1;
+  cursor: default;
 }
 .catalog-hotel {
   padding-top: 50px;
@@ -1297,7 +1339,7 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   list-style-type: none;
   gap:10px;
@@ -1439,7 +1481,7 @@ img {
 .more-button-dark:not(:disabled):hover,
 .navigation-link-right-button:not(:disabled):hover,
 .booking-link-button:not(:disabled):hover {
-  background-color: #615048;
+  background-color: rgba(97, 80, 72, 1);
 }
 .more-button-dark:not(:disabled):focus-visible,
 .navigation-link-right-button:not(:disabled):focus-visible,
@@ -1447,30 +1489,32 @@ img {
 .more-button-dark:not(:disabled):focus,
 .navigation-link-right-button:not(:disabled):focus,
 .booking-link-button:not(:disabled):focus {
-  background-color: #615048;
+  background-color: rgba(97, 80, 72, 1);
   outline: none;
 }
 .more-button-dark:not(:disabled):active,
 .navigation-link-right-button:not(:disabled):active,
 .booking-link-button:not(:disabled):active {
-  background-color: #756157;
-  color: #FFFFFF4D;
+  background: rgba(117, 97, 87, 1);
+  color: rgba(255, 255, 255, 0.3);
 }
 .more-button-dark:disabled,
 .navigation-link-right-button:disabled,
 .booking-link-button:disabled {
-  background-color: #E5E5E5;
-  opacity:0.7;
+  background-color: rgba(229, 229, 229, 1);
+  color: rgba(255, 255, 255, 1);
+  cursor: default;
 }
 .more-button-light {
-  background-color: #82B3D3;
+  background-color: rgba(130, 179, 211, 1);
   grid-area: more-button-light;
   transition: background-color 0.5s, color 0.5s;
 }
 .more-button-light:not(:disabled):hover,
 .filter-button-current:not(:disabled):hover,
 .subscribe-button-button:not(:disabled):hover {
-  background-color: #68A2CA;
+  background-color: rgba(104, 162, 202, 1);
+
 }
 .more-button-light:not(:disabled):focus-visible,
 .filter-button-current:not(:disabled):focus-visible,
@@ -1478,40 +1522,42 @@ img {
 .more-button-light:not(:disabled):focus,
 .filter-button-current:not(:disabled):focus,
 .subscribe-button-button:not(:disabled):focus {
-  background-color: #68A2CA;
+  background-color: rgba(104, 162, 202, 1);
   outline: none;
 }
 .more-button-light:not(:disabled):active,
 .filter-button-current:not(:disabled):active,
 .subscribe-button-button:not(:disabled):active {
-  background-color: #82B3D3;
-  color: #FFFFFF4D;
+  background-color: rgba(130, 179, 211, 1);
+  color: rgba(255, 255, 255, 0.3);
 }
 .more-button-light:disabled,
 .filter-button-current:disabled,
 .subscribe-button-button:disabled {
-  background-color: #E5E5E5;
-  opacity:0.7;
+  background-color: rgba(229, 229, 229, 1);
+  color: rgba(255, 255, 255, 1);
+  cursor: default;
 }
 .more-button-intermediate {
-  background-color: #7DB54F;
+  background-color: rgba(125, 181, 79, 1);
   transition: background-color 0.5s, color 0.5s;
 }
 .more-button-intermediate:not(:disabled):hover {
-  background-color: #6C9E42;
+  background-color: rgba(108, 158, 66, 1);
 }
 .more-button-intermediate:not(:disabled):focus-visible,
 .more-button-intermediate:not(:disabled):focus {
-  background-color: #6C9E42;
+  background-color: rgba(108, 158, 66, 1);
   outline: none;
 }
 .more-button-intermediate:not(:disabled):active {
-  background-color: #7DB54F;
-  color: #FFFFFF4D;
+  background-color: rgba(125, 181, 79, 1);
+  background: rgba(255, 255, 255, 0.3);
 }
 .more-button-intermediate:disabled {
-  background-color: #E5E5E5;
-  opacity:0.7;
+  background-color: rgba(229, 229, 229, 1);
+  color: rgba(255, 255, 255, 1);
+  cursor: default;
 }
 .catalog-card-p-top {
   margin: 0;
@@ -1620,8 +1666,6 @@ img {
   background-color: #F2F2F2;
   min-width: 60px;
   min-height: 60px;
-  max-width: 60px;
-  max-height: 60px;
   border: none;
   border-radius: 4px;
 }
@@ -1687,12 +1731,14 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: auto;
   background-color: #ffffff;
   box-shadow: 0 25px 50px 0 #00000026;
   padding: 64px 70px;
   border-radius: 30px;
   max-width: 717px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
 .modal-top {
   top: 0;
@@ -1789,11 +1835,12 @@ img {
   justify-content: start;
 }
 .modal-label-wrapper-right {
-  position: relative;
+  gap: 10px;
   min-height: 48px;
+  max-width: 85px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: start;
 }
@@ -1808,6 +1855,8 @@ img {
   justify-content: start;
 }
 .modal-label-right {
+  margin: 0;
+  padding: 0;
   display: block;
   white-space: wrap;
   max-width: 49px;
@@ -1828,6 +1877,7 @@ img {
   border: none;
   border-radius: 4px;
   padding: 12px 60px 12px 20px;
+  transition: background-color 0.5s, color 0.5s;
 }
 .modal-info-messenger {
   display: block;
@@ -1849,12 +1899,12 @@ img {
 }
 .modal-label-text {
   margin: 0;
-  font-family: "PT Sans";
+  font-family: inherit;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0);
 }
 .modal-input-text {
   margin: 0;
@@ -1863,8 +1913,10 @@ img {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0);
   vertical-align: middle;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
 }
 .modal-input:hover {
   background: rgba(229, 229, 229, 1);
@@ -1873,6 +1925,9 @@ img {
   background-repeat: no-repeat;
   background-size: 20px 20px;
   background-position: center right 20px;
+}
+.modal-input-text::placeholder {
+  color: rgba(0, 0, 0, 0.6);
 }
 .modal-input:focus,
 .modal-input:focus-visible {
@@ -1916,7 +1971,7 @@ img {
   justify-content: flex-start;
   border: none;
   box-sizing: border-box;
-  gap: 82px;
+  gap: 46px;
 }
 .modal-input-end {
   display: block;
@@ -1940,11 +1995,12 @@ img {
   min-height: 48px;
 }
 .modal-button-left {
+  padding: 0;
+  margin: 14px 10px;
   position: absolute;
   display: block;
   width: 20px;
   height: 20px;
-  margin: 14px 10px;
   background:
     linear-gradient(#7561574D,#7561574D);
   background-position:center;
@@ -1955,26 +2011,26 @@ img {
   border: none;
 }
 .modal-button-right {
+  padding: 0;
+  margin: 14px 10px;
   position: absolute;
   right: 0;
   display: block;
   width: 20px;
   height: 20px;
-  margin: 14px 10px;
   background:
     linear-gradient(#7561574D,#7561574D),
     linear-gradient(#7561574D,#7561574D);
   background-position:center;
   background-size: 50% 2px,2px 50%;
   background-repeat:no-repeat;
-  text-decoration: none;
   cursor: pointer;
   border: none;
 }
 .modal-button-left:hover {
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   background:
     linear-gradient(#000000,#000000);
   background-position:center;
@@ -1984,8 +2040,8 @@ img {
 }
 .modal-button-right:hover {
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   background:
   linear-gradient(#000000,#000000),
   linear-gradient(#000000,#000000);
@@ -2003,8 +2059,8 @@ img {
   outline: 3px solid #68A2CA;
   border-radius: 4px;
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   background:
     linear-gradient(#000000,#000000);
   background-position:center;
@@ -2016,8 +2072,8 @@ img {
   outline: 3px solid #68A2CA;
   border-radius: 4px;
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   background:
   linear-gradient(#000000,#000000),
   linear-gradient(#000000,#000000);
@@ -2028,8 +2084,8 @@ img {
 }
 .modal-button-left:active {
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   margin: 17px 13px;
   background:
     linear-gradient(#7561574D,#7561574D);
@@ -2043,8 +2099,8 @@ img {
 }
 .modal-button-right:active {
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   margin: 17px 13px;
   background:
     linear-gradient(#7561574D,#7561574D),
@@ -2071,7 +2127,7 @@ img {
   border-radius: 10px;
   padding: 18px 77px;
   border: none;
-  background-color: #83B3D3;
+  background-color: rgba(131, 179, 211, 1);
   font-family: PT Sans;
   font-weight: 700;
   font-size: 20px;
@@ -2079,47 +2135,44 @@ img {
   text-align: center;
   text-transform: uppercase;
   color: rgba(255, 255, 255);
-}
-.modal-submit-button:hover {
-  background-color: #68A2CA;
   transition: background-color 0.5s, color 0.5s;
 }
-.modal-submit-button:focus,
-.modal-submit-button:focus-visible {
-  background-color: #68A2CA;
-  transition: background-color 0.5s, color 0.5s;
+.modal-submit-button:not(:disabled):hover {
+  background-color: rgba(104, 162, 202, 1);
+}
+.modal-submit-button:not(:disabled):focus,
+.modal-submit-button:not(:disabled):focus-visible {
+  background-color: rgba(104, 162, 202, 1);
   outline: none;
 }
-.modal-submit-button:active {
-  background-color: #68A2CA;
-  transition: background-color 0.5s, color 0.5s;
+.modal-submit-button:not(:disabled):active {
+  background-color: rgba(104, 162, 202, 1);
   color: rgba(255, 255, 255, 0.3);
 }
+.modal-submit-button:disabled {
+  background-color: rgba(229, 229, 229, 1);
+  color: rgba(255, 255, 255, 1);
+  cursor: default;
+}
 /*----------------popover---------------- */
-.tooltip {
+.tooltip-toggle-wrapper {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: end;
-  left: 59px;
-  position: absolute;
-  width: 26px;
-  height: 26px;
-
+  justify-content: center;
 }
 .tooltip-toggle {
   border: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  display: block;
-}
-.tooltip-icon {
-  width: 100%;
-  height: 100%;
-  color: #242424;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  background-color: #83B3D3;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  outline: none;
 }
 .tooltip-text {
   position: absolute;
@@ -2144,22 +2197,22 @@ img {
   margin-bottom: -184px;
   display: none;
 }
-.tooltip-triangle {
-  background: #555555;
+.tooltip-text::before {
+  content:'';
   position: absolute;
-  border: none;
-  z-index: 10;
-  margin-top: -29px;
-  left: 50%;
+  top: 1px;
+  left: 49%;
   transform: translateX(-50%);
+  rotate: 45deg;
   width: 19px;
-  height: 12px;
-  background-image: url("../images/triangle.svg");
-  background-repeat: no-repeat;
-  display: none
+  height: 19px;
+  background-color: rgba(51, 51, 51, 1);
+  z-index: -1;
+  /* display: none; */
 }
 .tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
+.tooltip-toggle:focus + .tooltip-text,
+.tooltip-toggle:focus-visible + .tooltip-text  {
   display: block;
 }
  /*----------------end popover----------------*/

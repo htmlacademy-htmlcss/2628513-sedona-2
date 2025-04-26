@@ -1,38 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Document</title>
   </head>
-
   <body>
     <div class="page-container">
       <header class="page-header">
         <a class="logo-link" href="index.html">
           <span class="visually-hidden">Логотип.</span>
-          <span class="logo">
-            <img class="logo-img" src="images/logo.svg" width="140" height="70" alt="Логотип компании.">
-          </span>
+          <img class="logo-img" src="images/logo.svg" width="140" height="70" alt="Логотип компании.">
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" aria-current="page" href="index.html">Главная</a>
+              <a class="navigation-link navigation-item-current" aria-current="page" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" aria-current="page" href="#">О Седоне</a>
+              <a class="navigation-link " aria-current="page" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-item-current" aria-current="page" href="catalog.html">Гостиницы</a>
+              <a class="navigation-link" aria-current="page" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
           <ul class="navigation-list-right">
             <li class="navigation-item-right">
-              <a class="navigation-link-right
-              search" href="#">
+              <a class="navigation-link-right search" href="#">
                 <span class="visually-hidden">Поиск.</span>
               </a>
             </li>
@@ -43,9 +38,9 @@
               </a>
             </li>
             <li class="navigation-item-button">
-              <a class="more-button color-light navigation-link-right-button" href="#">
+              <button class="more-button color-light navigation-link-right-button">
                 ХОЧУ СЮДА!
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
@@ -79,7 +74,7 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control color-light" for="pool">
-                    <input class="control-input" type="checkbox" name="swimming-pool" id="pool" checked disabled>
+                    <input class="control-input" type="checkbox" name="swimming-pool" id="pool">
                     <span class="control-mark"></span>
                     <span class="control-label">Бассейн</span>
                   </label>
@@ -127,7 +122,8 @@
               </ul>
             </fieldset>
             <fieldset class="filter-price-item">
-              <legend class="filter-price-top color-light">Стоимость,<span class="filter-price-top color-light">&nbsp;&#8381;</span>:
+              <legend class="filter-price-top color-light">Стоимость,
+                <span class="filter-price-top color-light"> &#8381;</span>:
               </legend>
               <div class="filter-price-form">
                 <input class="filter-price-input input-left" type="text" value="0" placeholder="0" id="min">
@@ -143,9 +139,9 @@
                 <div class="range-scale">
                   <div class="range-bar">
                     <button type="button" class="range-toggle toggle-min">
-                    <span class="visually-hidden">
-                      Изменить минимальную стоимость.
-                    </span>
+                      <span class="visually-hidden">
+                        Изменить минимальную стоимость.
+                      </span>
                     </button>
                     <button type="button" class="range-toggle toggle-max">
                       <span class="visually-hidden">
@@ -158,9 +154,11 @@
             </fieldset>
             <div class="filter-buttons-item">
               <button class="more-button color-light filter-button-current" type="submit">
-                <span>Применить</span></button>
+                <span>Применить</span>
+              </button>
               <button class="more-button color-light filter-button" type="reset">
-                <span>Сбросить</span></button>
+                <span>Сбросить</span>
+              </button>
             </div>
           </form>
         </section>
@@ -208,7 +206,7 @@
                 Гостиница
               </p>
               <p class="catalog-card-p-top grid-p2">
-                От<span class="catalog-card-price-base">&nbsp;4000&nbsp;</span>&#8381;
+                От<span class="catalog-card-price-base">&nbsp;4000&nbsp;</span>
               </p>
               <button class="more-button color-light more-button-dark">
                 <span>
