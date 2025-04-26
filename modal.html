@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Modal</title>
+  </head>
+
+  <body>
+    <div class="modal-container modal-button-close data-test='modal'">
+      <div class="modal">
+        <div class="modal-top">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <button class="modal-close-button">
+            <span class="visually-hidden">
+              Закрыть окно поиска гостиниц в Седоне.
+            </span>
+          </button>
+        </div>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="modal-group">
+            <div class="modal-wrapper">
+              <div class="modal-label-wrapper">
+                <label class="modal-label modal-label-text" for="modal-label-top">
+                  Дата Заезда:
+                </label>
+              </div>
+              <div class="modal-input-wrapper-top">
+                <input class="modal-input modal-input-text" type="text" value="27 апреля 2020" placeholder="27 апреля 2020" id="modal-label-top">
+                <span class="modal-info-messenger modal-info-messenger-warning">
+                  Мы не можем отправить вас в прошлое.
+                </span>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="modal-group">
+            <div class="modal-wrapper">
+              <div class="modal-label-wrapper">
+                <label class="modal-label modal-label-text" for="modal-label-bottom">
+                  Дата Выезда:
+                </label>
+              </div>
+              <div class="modal-input-wrapper-top">
+                <input class="modal-input modal-input-text" type="text" value="1 сентября 2023" placeholder="1 сентября 2021" id="modal-label-bottom">
+                <span class="modal-info-messenger">
+                  На эти даты есть свободные номера. Пока есть
+                </span>
+              </div>
+            </div>
+          </fieldset>
+          <div class="modal-all">
+            <fieldset class="modal-item-left">
+              <div class="modal-label-wrapper">
+                <label class="modal-label modal-label-text" for="modal-label-text-left">
+                  Взрослые:
+                </label>
+              </div>
+              <div class="modal-input-wrapper-end">
+                <button class="modal-button-left" type="button"></button>
+                <input class="modal-input-end modal-input-text" type="number" value="2" placeholder="2" id="modal-label-text-left">
+                <button class="modal-button-right" type="button"></button>
+              </div>
+            </fieldset>
+            <fieldset class="modal-item-right">
+              <div class="modal-label-wrapper-right">
+                <label class="modal-label-right modal-label-text" for="modal-label-text-right">
+                  Дети:
+                </label>
+                <div class="tooltip-toggle-wrapper">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children">i
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-children">
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </div>
+              </div>
+              <div class="modal-input-wrapper-end">
+                <button class="modal-button-left" type="button"></button>
+                <input class="modal-input-end modal-input-text" type="number" value="2" placeholder="2" id="modal-label-text-right">
+                <button class="modal-button-right" type="button"></button>
+              </div>
+            </fieldset>
+          </div>
+          <button class=" modal-submit-button" type="submit">
+            Найти
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+
+</html>

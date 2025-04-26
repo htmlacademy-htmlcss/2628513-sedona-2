@@ -11,7 +11,7 @@
 
   <body>
     <div class="page-container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <a class="logo-link" href="index.html">
           <span class="visually-hidden">Логотип.</span>
           <img class="logo-img" src="images/logo.svg" width="140" height="70" alt="Логотип компании.">
@@ -48,12 +48,12 @@
           </ul>
         </nav>
       </header>
-      <main class="main-container">
-        <section class="welcome">
+      <main class="main-container" data-test="main">
+        <section class="welcome" data-test="hero">
           <h1 class="visually-hidden">Седона - город в Аризоне.</h1>
           <img class="welcome-img proportions-img-index" src="images/welcome.svg" width="458" height="352" alt="добро пожаловать в Седону.">
         </section>
-        <section class="advantages">
+        <section class="advantages" data-test="advantages">
           <h2 class="advantages-top font-unified-top">
             Седона — небольшой городок в Аризоне,<br>заслуживающий большего!
           </h2>
@@ -104,7 +104,7 @@
             </li>
           </ul>
         </section>
-        <section class="infrastructure">
+        <section class="infrastructure" data-test="service">
           <h2 class="infrastructure-top font-unified-top">
             Приезжайте в Седону отдохнуть в комфорте и уюте!
           </h2>
@@ -132,7 +132,7 @@
             </li>
           </ul>
         </section>
-        <section class="booking">
+        <section class="booking" data-test="search">
           <h2 class="booking-top font-unified-top">Заинтересовались?</h2>
           <p class="booking-top-description font-unified-description">
             Укажите предполагаемые даты поездки,<br>
@@ -142,7 +142,7 @@
             Поиск гостиницы в Седоне
           </button>
         </section>
-        <section class="subscribe subscribe-background">
+        <section class="subscribe subscribe-background" data-test="subscribe">
           <h2 class="subscribe-top font-unified-top color-light">Подпишитесь на рассылку</h2>
           <p class="subscribe-top-discription font-unified-description color-light">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="http://echo.htmlacademy.ru/" method="post">
@@ -154,7 +154,7 @@
           </form>
         </section>
       </main>
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <h2 class="visually-hidden">Социальные сети.</h2>
         <ul class="social-list">
           <li class="social-item">
@@ -182,86 +182,6 @@
           </a>
         </div>
       </footer>
-    </div>
-    <div class="modal-container">
-      <div class="modal">
-        <div class="modal-top">
-          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <button class="modal-close-button">
-            <span class="visually-hidden">
-              Закрыть окно поиска гостиниц в Седоне.
-            </span>
-          </button>
-        </div>
-        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="modal-group">
-            <div class="modal-wrapper">
-              <div class="modal-label-wrapper">
-                <label class="modal-label modal-label-text" for="modal-label-top">
-                  Дата Заезда:
-                </label>
-              </div>
-              <div class="modal-input-wrapper-top">
-                <input class="modal-input modal-input-text" type="text" value="27 апреля 2020" placeholder="27 апреля 2020" id="modal-label-top">
-                <span class="modal-info-messenger modal-info-messenger-warning">
-                  Мы не можем отправить вас в прошлое.
-                </span>
-              </div>
-            </div>
-          </fieldset>
-          <fieldset class="modal-group">
-            <div class="modal-wrapper">
-              <div class="modal-label-wrapper">
-                <label class="modal-label modal-label-text" for="modal-label-bottom">
-                  Дата Выезда:
-                </label>
-              </div>
-              <div class="modal-input-wrapper-top">
-                <input class="modal-input modal-input-text" type="text" value="1 сентября 2023" placeholder="1 сентября 2021" id="modal-label-bottom">
-                <span class="modal-info-messenger">
-                  На эти даты есть свободные номера. Пока есть
-                </span>
-              </div>
-            </div>
-          </fieldset>
-          <div class="modal-all">
-            <fieldset class="modal-item-left">
-              <div class="modal-label-wrapper">
-                <label class="modal-label modal-label-text" for="modal-label-text-left">
-                  Взрослые:
-                </label>
-              </div>
-              <div class="modal-input-wrapper-end">
-                <button class="modal-button-left" type="button"></button>
-                <input class="modal-input-end modal-input-text" type="number" value="2" placeholder="2" id="modal-label-text-left">
-                <button class="modal-button-right" type="button"></button>
-              </div>
-            </fieldset>
-            <fieldset class="modal-item-right">
-              <div class="modal-label-wrapper-right">
-                <label class="modal-label-right modal-label-text" for="modal-label-text-right">
-                  Дети:
-                </label>
-                <div class="tooltip-toggle-wrapper">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children">i
-                  </button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-label-children">
-                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
-                  </span>
-                </div>
-              </div>
-              <div class="modal-input-wrapper-end">
-                <button class="modal-button-left" type="button"></button>
-                <input class="modal-input-end modal-input-text" type="number" value="2" placeholder="2" id="modal-label-text-right">
-                <button class="modal-button-right" type="button"></button>
-              </div>
-            </fieldset>
-          </div>
-          <button class=" modal-submit-button" type="submit">
-            Найти
-          </button>
-        </form>
-      </div>
     </div>
   </body>
 
