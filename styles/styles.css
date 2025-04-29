@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: > 2% and last 1 version
+*/
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -2234,7 +2241,13 @@ img {
 .modal-input-end[type="number"]::-webkit-inner-spin-button,
 .modal-input-end[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
+            appearance: none;
     margin: 0;
+}
+
+.modal-input-end[type='number'] {
+  -moz-appearance: textfield;
+  margin: 0;
 }
 
 .modal-input-wrapper-end {
