@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <title>Modal</title>
   </head>
 
@@ -20,52 +21,48 @@
           </button>
         </div>
         <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="modal-group">
-            <div class="modal-wrapper">
-              <div class="modal-label-wrapper">
-                <label class="modal-label modal-label-text" for="modal-label-top">
-                  Дата Заезда:
-                </label>
-              </div>
-              <div class="modal-input-wrapper-top">
-                <input class="modal-input modal-input-text" type="text" value="27 апреля 2020" placeholder="27 апреля 2020" id="modal-label-top">
-                <span class="modal-info-messenger modal-info-messenger-warning">
-                  Мы не можем отправить вас в прошлое.
-                </span>
-              </div>
+          <fieldset class="modal-wrapper">
+            <div class="modal-label-wrapper">
+              <label class="modal-label modal-label-text" for="start-date">
+                Дата Заезда:
+              </label>
+            </div>
+            <div class="modal-input-wrapper-top">
+              <input class="modal-input modal-input-text" type="text" value="27 апреля 2020" placeholder="27 апреля 2020" id="start-date" name="start-date">
+              <span class="modal-info-messenger modal-info-messenger-warning">
+                Мы не можем отправить вас в прошлое.
+              </span>
             </div>
           </fieldset>
-          <fieldset class="modal-group">
-            <div class="modal-wrapper">
-              <div class="modal-label-wrapper">
-                <label class="modal-label modal-label-text" for="modal-label-bottom">
-                  Дата Выезда:
-                </label>
-              </div>
-              <div class="modal-input-wrapper-top">
-                <input class="modal-input modal-input-text" type="text" value="1 сентября 2023" placeholder="1 сентября 2021" id="modal-label-bottom">
-                <span class="modal-info-messenger">
-                  На эти даты есть свободные номера. Пока есть
-                </span>
-              </div>
+          <fieldset class="modal-wrapper">
+            <div class="modal-label-wrapper">
+              <label class="modal-label modal-label-text" for="end-date">
+                Дата Выезда:
+              </label>
+            </div>
+            <div class="modal-input-wrapper-top">
+              <input class="modal-input modal-input-text" type="text" value="1 сентября 2023" placeholder="1 сентября 2021"  id="end-date" name="end-date">
+              <span class="modal-info-messenger">
+                На эти даты есть свободные номера. Пока есть
+              </span>
             </div>
           </fieldset>
           <div class="modal-all">
             <fieldset class="modal-item-left">
               <div class="modal-label-wrapper">
-                <label class="modal-label modal-label-text" for="modal-label-text-left">
+                <label class="modal-label modal-label-text" for="number">
                   Взрослые:
                 </label>
               </div>
               <div class="modal-input-wrapper-end">
                 <button class="modal-button-left" type="button"></button>
-                <input class="modal-input-end modal-input-text" type="number" value="2" placeholder="2" id="modal-label-text-left">
+                <input class="modal-input-end modal-input-text" type="number" value="2" placeholder="2" id="number" name="number">
                 <button class="modal-button-right" type="button"></button>
               </div>
             </fieldset>
             <fieldset class="modal-item-right">
               <div class="modal-label-wrapper-right">
-                <label class="modal-label-right modal-label-text" for="modal-label-text-right">
+                <label class="modal-label-right modal-label-text" for="number-child">
                   Дети:
                 </label>
                 <div class="tooltip-toggle-wrapper">
@@ -78,12 +75,12 @@
               </div>
               <div class="modal-input-wrapper-end">
                 <button class="modal-button-left" type="button"></button>
-                <input class="modal-input-end modal-input-text" type="number" value="2" placeholder="2" id="modal-label-text-right">
+                <input class="modal-input-end modal-input-text" type="number" value="2" placeholder="2" id="number-child" name="number-child">
                 <button class="modal-button-right" type="button"></button>
               </div>
             </fieldset>
           </div>
-          <button class=" modal-submit-button" type="submit">
+          <button class="modal-submit-button" type="submit">
             Найти
           </button>
         </form>
