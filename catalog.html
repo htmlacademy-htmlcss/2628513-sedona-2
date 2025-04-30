@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon.ico" sizes="32x32">
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <title>Document</title>
   </head>
 
   <body>
     <div class="page-container">
-      <header class="page-header" data-test="main">
+      <header class="page-header" data-test="header">
         <a class="logo-link" href="index.html">
           <span class="visually-hidden">Логотип.</span>
           <img class="logo-img" src="images/logo.svg" width="140" height="70" alt="Логотип компании.">
@@ -43,8 +41,10 @@
               </a>
             </li>
             <li class="navigation-item-button">
-              <a class="more-button color-light navigation-link-right-button">
-                ХОЧУ СЮДА!
+              <a class="more-button color-light navigation-link-right-button" href="#">
+                <span class="more-button-position">
+                  ХОЧУ СЮДА!
+                </span>
               </a>
             </li>
           </ul>
@@ -131,11 +131,11 @@
                 <span class="filter-price-top color-light"> &#8381;</span>:
               </legend>
               <div class="filter-price-form">
-                <input class="filter-price-input input-left" type="text" value="0" placeholder="0" id="min">
+                <input class="filter-price-input input-left" type="text" value="0" placeholder="0" id="min" name="min-price">
                 <label class="filter-price-label label-grid-left" for="min">
                   от
                 </label>
-                <input class="filter-price-input input-right" type="text" value="9000" placeholder="9000" id="max">
+                <input class="filter-price-input input-right" type="text" value="9000" placeholder="9000" id="max" name="max-price">
                 <label class="filter-price-label label-grid-right" for="max">
                   до
                 </label>
@@ -213,7 +213,7 @@
               <p class="catalog-card-p-top grid-p2">
                 От<span class="catalog-card-price-base">&nbsp;4000&nbsp;</span>&#8381;
               </p>
-              <a class="more-button color-light more-button-dark">
+              <a class="more-button color-light more-button-dark" href="#">
                 <span>
                   Подробнее
                 </span>
@@ -249,7 +249,7 @@
               <p class="catalog-card-p-top grid-p2">
                 От<span class="catalog-card-price-base">&nbsp;5000&nbsp;</span>&#8381;
               </p>
-              <a class="more-button color-light more-button-dark">
+              <a class="more-button color-light more-button-dark" href="#">
                 Подробнее
               </a>
               <button class="more-button color-light more-button-intermediate">
@@ -283,7 +283,7 @@
               <p class="catalog-card-p-top grid-p2">
                 От<span class="catalog-card-price-base">&nbsp;2500&nbsp;</span>&#8381;
               </p>
-              <a class="more-button color-light more-button-dark">
+              <a class="more-button color-light more-button-dark" href="#">
                 Подробнее
               </a>
               <button class="more-button color-light more-button-light">
@@ -316,7 +316,7 @@
               <p class="catalog-card-p-top grid-p2">
                 От<span class="catalog-card-price-base">&nbsp;1500&nbsp;</span>&#8381;
               </p>
-              <a class="more-button color-light more-button-dark">
+              <a class="more-button color-light more-button-dark" href="#">
                 Подробнее
               </a>
               <button class="more-button color-light more-button-light">
