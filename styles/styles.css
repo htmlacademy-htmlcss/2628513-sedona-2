@@ -1642,7 +1642,7 @@ img {
   grid-column: 1 / -1;
 }
 
-.grid-h3 {
+.grid-heading {
   grid-column: 1 / -1;
   display: flex;
   align-items: center;
@@ -1657,7 +1657,7 @@ img {
   text-align: center;
 }
 
-.grid-p2 {
+.grid-paragraph {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1782,7 +1782,7 @@ img {
   cursor: default;
 }
 
-.catalog-card-p-top {
+.catalog-card-name-top {
   margin: 0;
   padding: 0;
   color: #333;
@@ -1822,7 +1822,7 @@ img {
   cursor: pointer;
 }
 
-.catalog-card-p-bottom-wrapper {
+.catalog-card-bottom-wrapper {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -1830,7 +1830,7 @@ img {
   text-align: center;
 }
 
-.catalog-card-p-bottom {
+.catalog-card-name-bottom {
   margin: 0;
   min-width: 140px;
   min-height: 37px;
